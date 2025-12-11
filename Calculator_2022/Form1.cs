@@ -103,9 +103,11 @@ namespace Calculator_2022
         //************************************************
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            total1 = total1 + double.Parse(txtDisplay.Text);
-            
-            txtDisplay.Clear();
+            //total1 = total1 + double.Parse(txtDisplay.Text);
+
+            //txtDisplay.Clear();
+            getOperandValueAndClearDisplay();
+
             updateOperationStatus('+');
 
         }
@@ -115,9 +117,11 @@ namespace Calculator_2022
         //************************************************
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            total1 = total1+double.Parse(txtDisplay.Text);
-            
-            txtDisplay.Clear();
+            //total1 = total1+double.Parse(txtDisplay.Text);
+
+            //txtDisplay.Clear();
+            getOperandValueAndClearDisplay();
+
             updateOperationStatus('-');
 
         }
@@ -127,9 +131,11 @@ namespace Calculator_2022
         //************************************************
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            total1 = total1+double.Parse(txtDisplay.Text);
+            //total1 = total1+double.Parse(txtDisplay.Text);
             
-            txtDisplay.Clear();
+            //txtDisplay.Clear();
+            getOperandValueAndClearDisplay();
+
             updateOperationStatus('*');
 
         }
@@ -139,9 +145,10 @@ namespace Calculator_2022
         //************************************************
         private void btnDivision_Click(object sender, EventArgs e)
         {
-            total1 = total1+double.Parse(txtDisplay.Text);
-            
-            txtDisplay.Clear();//clears the display textbox
+            //total1 = total1+double.Parse(txtDisplay.Text);
+
+            //txtDisplay.Clear();//clears the display textbox
+            getOperandValueAndClearDisplay();
             updateOperationStatus('/');
 
         }
@@ -179,6 +186,12 @@ namespace Calculator_2022
 
             txtDisplay.Text = total2.ToString();//display the total value
             total1 = 0;//start from the beginning
+        }
+
+        private void getOperandValueAndClearDisplay()
+        {
+            total1 = total1 + double.Parse(txtDisplay.Text);
+            txtDisplay.Clear();
         }
 
         private void updateOperationStatus(char operation)
