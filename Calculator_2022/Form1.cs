@@ -146,8 +146,9 @@ namespace Calculator_2022
 
         }// end of btnExponen_Click event
 
-        private void btnRoot_Click(object sender, EventArgs e)
+        private void btnSqaureRoot_Click(object sender, EventArgs e)
         {
+            //getOperandValueAndClearDisplay();
             //√
         }// end of btnRoot_Click event
 
