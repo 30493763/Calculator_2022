@@ -23,6 +23,7 @@ namespace Calculator_2022
         bool minusButtonClicked = false;
         bool divideButtonClicked = false;
         bool multiplyButtonClicked = false;
+        bool exponentButtonClicked = false;
         //****************************************************
         public Form1()
         {
@@ -103,13 +104,8 @@ namespace Calculator_2022
         //************************************************
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            //total1 = total1 + double.Parse(txtDisplay.Text);
-
-            //txtDisplay.Clear();
             getOperandValueAndClearDisplay();
-
             updateOperationStatus('+');
-
         }
 
         //***********************************************
@@ -117,13 +113,8 @@ namespace Calculator_2022
         //************************************************
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            //total1 = total1+double.Parse(txtDisplay.Text);
-
-            //txtDisplay.Clear();
             getOperandValueAndClearDisplay();
-
             updateOperationStatus('-');
-
         }
 
         //***********************************************
@@ -131,13 +122,8 @@ namespace Calculator_2022
         //************************************************
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            //total1 = total1+double.Parse(txtDisplay.Text);
-            
-            //txtDisplay.Clear();
             getOperandValueAndClearDisplay();
-
             updateOperationStatus('*');
-
         }
 
         //***********************************************
@@ -145,12 +131,8 @@ namespace Calculator_2022
         //************************************************
         private void btnDivision_Click(object sender, EventArgs e)
         {
-            //total1 = total1+double.Parse(txtDisplay.Text);
-
-            //txtDisplay.Clear();//clears the display textbox
             getOperandValueAndClearDisplay();
             updateOperationStatus('/');
-
         }
 
 
@@ -159,6 +141,8 @@ namespace Calculator_2022
         //************************************************
         private void btnExponen_Click(object sender, EventArgs e)
         {
+            getOperandValueAndClearDisplay();
+            updateOperationStatus('^');
 
         }
 
@@ -167,27 +151,50 @@ namespace Calculator_2022
         //************************************************
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            if (plusButtonClicked==true)
+            if (plusButtonClicked)
             {
                 total2 = total1 + double.Parse(txtDisplay.Text);
             }
-            else if (minusButtonClicked==true)
+            else if (minusButtonClicked)
             {
                 total2 = total1 - double.Parse(txtDisplay.Text);
             }
-            else if (multiplyButtonClicked==true)
+            else if (multiplyButtonClicked)
             {
                 total2 = total1 * double.Parse(txtDisplay.Text);
             }
-           else if (divideButtonClicked==true)
+           else if (divideButtonClicked)
             {
                 total2 = total1/double.Parse(txtDisplay.Text);
+            }
+            else if (exponentButtonClicked)
+            {
+                total2 = power(total1, double.Parse(txtDisplay.Text));
+
             }
 
             txtDisplay.Text = total2.ToString();//display the total value
             total1 = 0;//start from the beginning
         }
 
+
+        // Simple exponential helper - returns base^exponent using System.Math
+        private double power(double baseNumber, double exponent)
+        {
+            int result = 1;
+            if (baseNumber == 0 )
+                return 0;
+            else if (exponent == 0) 
+                return 1; //Any number raised to the power of 0 equals 1 (a^0 = 1). 
+            else
+            {
+                for (int i = 0; i < (int)exponent; i++)
+                {
+                    result *= (int)baseNumber;// Multiply result by base
+                }
+                return result;
+            }
+        }// end of power method
         private void getOperandValueAndClearDisplay()
         {
             total1 = total1 + double.Parse(txtDisplay.Text);
@@ -203,30 +210,47 @@ namespace Calculator_2022
                     minusButtonClicked = false;
                     multiplyButtonClicked = false;
                     divideButtonClicked = false;
+                    exponentButtonClicked = false;
                     break;
                 case '-':
                     plusButtonClicked = false;
                     minusButtonClicked = true;
                     multiplyButtonClicked = false;
                     divideButtonClicked = false;
+                    exponentButtonClicked = false;
+
                     break;
                 case '*':
                     plusButtonClicked = false;
                     minusButtonClicked = false;
                     multiplyButtonClicked = true;
                     divideButtonClicked = false;
+                    exponentButtonClicked = false;
+
                     break;
                 case '/':
                     plusButtonClicked = false;
                     minusButtonClicked = false;
                     multiplyButtonClicked = false;
                     divideButtonClicked = true;
+                    exponentButtonClicked = false;
+
+                    break;
+                case '^':
+                    plusButtonClicked = false;
+                    minusButtonClicked = false;
+                    multiplyButtonClicked = false;
+                    divideButtonClicked = false;
+                    exponentButtonClicked = true;
+
                     break;
                 default:
                     plusButtonClicked = false;
                     minusButtonClicked = false;
                     multiplyButtonClicked = false;
                     divideButtonClicked = false;
+                    exponentButtonClicked = false;
+
                     break;
             }
         }// end of private method updateOperationStatus
