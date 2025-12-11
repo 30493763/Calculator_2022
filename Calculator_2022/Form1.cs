@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,10 +95,7 @@ namespace Calculator_2022
             txtDisplay.Clear();
             total1 = 0;
             total2=0;
-            plusButtonClicked = false;
-            minusButtonClicked = false;
-            divideButtonClicked = false;
-            multiplyButtonClicked = false;
+            updateOperationStatus(default);
         }
 
         //***********************************************
@@ -107,11 +106,8 @@ namespace Calculator_2022
             total1 = total1 + double.Parse(txtDisplay.Text);
             
             txtDisplay.Clear();
+            updateOperationStatus('+');
 
-            plusButtonClicked = true;
-            minusButtonClicked = false;
-            divideButtonClicked = false;
-            multiplyButtonClicked = false;
         }
 
         //***********************************************
@@ -122,11 +118,7 @@ namespace Calculator_2022
             total1 = total1+double.Parse(txtDisplay.Text);
             
             txtDisplay.Clear();
-
-            minusButtonClicked = true;
-            plusButtonClicked = false;
-            divideButtonClicked = false;
-            multiplyButtonClicked = false;
+            updateOperationStatus('-');
 
         }
 
@@ -138,12 +130,8 @@ namespace Calculator_2022
             total1 = total1+double.Parse(txtDisplay.Text);
             
             txtDisplay.Clear();
+            updateOperationStatus('*');
 
-            multiplyButtonClicked = true;
-            plusButtonClicked = false;
-            minusButtonClicked = false;
-            divideButtonClicked = false;
-           
         }
 
         //***********************************************
@@ -154,12 +142,8 @@ namespace Calculator_2022
             total1 = total1+double.Parse(txtDisplay.Text);
             
             txtDisplay.Clear();//clears the display textbox
+            updateOperationStatus('/');
 
-            divideButtonClicked = true;
-            multiplyButtonClicked = false;
-            plusButtonClicked = false;
-            minusButtonClicked = false;
-           
         }
 
 
