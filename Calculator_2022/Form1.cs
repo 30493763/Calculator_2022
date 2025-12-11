@@ -144,7 +144,12 @@ namespace Calculator_2022
             getOperandValueAndClearDisplay();
             updateOperationStatus('^');
 
-        }
+        }// end of btnExponen_Click event
+
+        private void btnRoot_Click(object sender, EventArgs e)
+        {
+            //√
+        }// end of btnRoot_Click event
 
         //***********************************************
         //   Event for the Equal button - calculates the total value
@@ -237,5 +242,7 @@ namespace Calculator_2022
                     break;
             }
         }// end of private method updateOperationStatus
+
+
     }
 }

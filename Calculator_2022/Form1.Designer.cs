@@ -52,6 +52,7 @@ namespace Calculator_2022
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btnDivision = new System.Windows.Forms.Button();
             this.btnExponen = new System.Windows.Forms.Button();
+            this.btnRoot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDisplay
@@ -278,6 +279,18 @@ namespace Calculator_2022
             this.btnExponen.UseVisualStyleBackColor = true;
             this.btnExponen.Click += new System.EventHandler(this.btnExponen_Click);
             // 
+            // btnRoot
+            // 
+            this.btnRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoot.Location = new System.Drawing.Point(511, 187);
+            this.btnRoot.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRoot.Name = "btnRoot";
+            this.btnRoot.Size = new System.Drawing.Size(64, 37);
+            this.btnRoot.TabIndex = 19;
+            this.btnRoot.Text = "√";
+            this.btnRoot.UseVisualStyleBackColor = true;
+            this.btnRoot.Click += new System.EventHandler(this.btnRoot_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -285,6 +298,7 @@ namespace Calculator_2022
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(681, 559);
+            this.Controls.Add(this.btnRoot);
             this.Controls.Add(this.btnExponen);
             this.Controls.Add(this.btnDivision);
             this.Controls.Add(this.btnMultiply);
@@ -335,6 +349,7 @@ namespace Calculator_2022
         private System.Windows.Forms.Button btnMultiply;
         private System.Windows.Forms.Button btnDivision;
         private System.Windows.Forms.Button btnExponen;
+        private System.Windows.Forms.Button btnRoot;
     }
 }
 
