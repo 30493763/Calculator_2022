@@ -201,56 +201,39 @@ namespace Calculator_2022
             txtDisplay.Clear();
         }
 
+        private void resetAllOperationStatusToFalse()
+        {
+            bool[] clickedStatus = new bool[5] { plusButtonClicked, minusButtonClicked, multiplyButtonClicked, divideButtonClicked, exponentButtonClicked };
+
+            plusButtonClicked = false;
+            minusButtonClicked = false;
+            multiplyButtonClicked = false;
+            divideButtonClicked = false;
+            exponentButtonClicked = false;
+        }
+
         private void updateOperationStatus(char operation)
         {
+            resetAllOperationStatusToFalse();
+
             switch (operation)
             {
                 case '+':
                     plusButtonClicked = true;
-                    minusButtonClicked = false;
-                    multiplyButtonClicked = false;
-                    divideButtonClicked = false;
-                    exponentButtonClicked = false;
                     break;
                 case '-':
-                    plusButtonClicked = false;
                     minusButtonClicked = true;
-                    multiplyButtonClicked = false;
-                    divideButtonClicked = false;
-                    exponentButtonClicked = false;
-
                     break;
                 case '*':
-                    plusButtonClicked = false;
-                    minusButtonClicked = false;
                     multiplyButtonClicked = true;
-                    divideButtonClicked = false;
-                    exponentButtonClicked = false;
-
                     break;
                 case '/':
-                    plusButtonClicked = false;
-                    minusButtonClicked = false;
-                    multiplyButtonClicked = false;
                     divideButtonClicked = true;
-                    exponentButtonClicked = false;
-
                     break;
                 case '^':
-                    plusButtonClicked = false;
-                    minusButtonClicked = false;
-                    multiplyButtonClicked = false;
-                    divideButtonClicked = false;
                     exponentButtonClicked = true;
-
                     break;
                 default:
-                    plusButtonClicked = false;
-                    minusButtonClicked = false;
-                    multiplyButtonClicked = false;
-                    divideButtonClicked = false;
-                    exponentButtonClicked = false;
-
                     break;
             }
         }// end of private method updateOperationStatus
