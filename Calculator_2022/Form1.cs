@@ -24,6 +24,8 @@ namespace Calculator_2022
         bool divideButtonClicked = false;
         bool multiplyButtonClicked = false;
         bool exponentButtonClicked = false;
+        bool moduloButtonClicked = false;
+
         //****************************************************
         public Form1()
         {
@@ -146,10 +148,21 @@ namespace Calculator_2022
 
         }// end of btnExponen_Click event
 
+        //***********************************************
+        //   Event for the Modulo button
+        //************************************************
+        private void btnModulo_Click(object sender, EventArgs e)
+        {
+            getOperandValueAndClearDisplay();
+            updateOperationStatus('%');
+        }
+
+        //***********************************************
+        //   Event for the Square Root button
+        //************************************************
         private void btnSqaureRoot_Click(object sender, EventArgs e)
         {
-            //getOperandValueAndClearDisplay();
-            //√
+            txtDisplay.Text = Math.Sqrt(double.Parse(txtDisplay.Text)).ToString();
         }// end of btnRoot_Click event
 
         //***********************************************
@@ -176,7 +189,10 @@ namespace Calculator_2022
             else if (exponentButtonClicked)
             {
                 total2 = power(total1, double.Parse(txtDisplay.Text));
-
+            }
+            else if (moduloButtonClicked)
+            {
+                total2 = total1 % double.Parse(txtDisplay.Text);
             }
 
             txtDisplay.Text = total2.ToString();//display the total value
@@ -209,7 +225,7 @@ namespace Calculator_2022
 
         private void resetAllOperationStatusToFalse()
         {
-            bool[] clickedStatus = new bool[5] { plusButtonClicked, minusButtonClicked, multiplyButtonClicked, divideButtonClicked, exponentButtonClicked };
+            bool[] clickedStatus = new bool[6] { plusButtonClicked, minusButtonClicked, multiplyButtonClicked, divideButtonClicked, exponentButtonClicked, moduloButtonClicked };
             for (int i = 0; i < clickedStatus.Length; i++)
                 clickedStatus[i] = false;
         } // end of private method resetAllOperationStatusToFalse
@@ -234,6 +250,9 @@ namespace Calculator_2022
                     break;
                 case '^':
                     exponentButtonClicked = true;
+                    break;
+                case '%':
+                    moduloButtonClicked = true;
                     break;
                 default:
                     break;

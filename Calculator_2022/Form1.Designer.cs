@@ -53,6 +53,7 @@ namespace Calculator_2022
             this.btnDivision = new System.Windows.Forms.Button();
             this.btnExponen = new System.Windows.Forms.Button();
             this.btnSqaureRoot = new System.Windows.Forms.Button();
+            this.btnModulo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDisplay
@@ -291,6 +292,18 @@ namespace Calculator_2022
             this.btnSqaureRoot.UseVisualStyleBackColor = true;
             this.btnSqaureRoot.Click += new System.EventHandler(this.btnSqaureRoot_Click);
             // 
+            // btnModulo
+            // 
+            this.btnModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModulo.Location = new System.Drawing.Point(511, 242);
+            this.btnModulo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModulo.Name = "btnModulo";
+            this.btnModulo.Size = new System.Drawing.Size(64, 37);
+            this.btnModulo.TabIndex = 20;
+            this.btnModulo.Text = "%";
+            this.btnModulo.UseVisualStyleBackColor = true;
+            this.btnModulo.Click += new System.EventHandler(this.btnModulo_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -298,6 +311,7 @@ namespace Calculator_2022
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(681, 559);
+            this.Controls.Add(this.btnModulo);
             this.Controls.Add(this.btnSqaureRoot);
             this.Controls.Add(this.btnExponen);
             this.Controls.Add(this.btnDivision);
@@ -350,6 +364,7 @@ namespace Calculator_2022
         private System.Windows.Forms.Button btnDivision;
         private System.Windows.Forms.Button btnExponen;
         private System.Windows.Forms.Button btnSqaureRoot;
+        private System.Windows.Forms.Button btnModulo;
     }
 }
 
