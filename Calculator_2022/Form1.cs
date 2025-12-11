@@ -162,6 +162,15 @@ namespace Calculator_2022
            
         }
 
+
+        //***********************************************
+        //   Event for the Exponent button
+        //************************************************
+        private void btnExponen_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //***********************************************
         //   Event for the Equal button - calculates the total value
         //************************************************
@@ -188,9 +197,41 @@ namespace Calculator_2022
             total1 = 0;//start from the beginning
         }
 
-        private void btnExponen_Click(object sender, EventArgs e)
+        private void updateOperationStatus(char operation)
         {
-
-        }
+            switch (operation)
+            {
+                case '+':
+                    plusButtonClicked = true;
+                    minusButtonClicked = false;
+                    multiplyButtonClicked = false;
+                    divideButtonClicked = false;
+                    break;
+                case '-':
+                    plusButtonClicked = false;
+                    minusButtonClicked = true;
+                    multiplyButtonClicked = false;
+                    divideButtonClicked = false;
+                    break;
+                case '*':
+                    plusButtonClicked = false;
+                    minusButtonClicked = false;
+                    multiplyButtonClicked = true;
+                    divideButtonClicked = false;
+                    break;
+                case '/':
+                    plusButtonClicked = false;
+                    minusButtonClicked = false;
+                    multiplyButtonClicked = false;
+                    divideButtonClicked = true;
+                    break;
+                default:
+                    plusButtonClicked = false;
+                    minusButtonClicked = false;
+                    multiplyButtonClicked = false;
+                    divideButtonClicked = false;
+                    break;
+            }
+        }// end of private method updateOperationStatus
     }
 }
