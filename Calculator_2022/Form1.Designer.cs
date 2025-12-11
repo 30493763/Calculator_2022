@@ -1,7 +1,11 @@
-﻿namespace Calculator_2022
+﻿using System.Drawing.Text;
+
+namespace Calculator_2022
 {
+
     partial class Form1
-    {
+    {   
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -21,6 +25,7 @@
         }
 
         #region Windows Form Designer generated code
+
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -271,6 +276,7 @@
             this.btnExponen.TabIndex = 18;
             this.btnExponen.Text = "^";
             this.btnExponen.UseVisualStyleBackColor = true;
+            this.btnExponen.Click += new System.EventHandler(this.btnExponen_Click);
             // 
             // Form1
             // 

@@ -187,5 +187,10 @@ namespace Calculator_2022
             txtDisplay.Text = total2.ToString();//display the total value
             total1 = 0;//start from the beginning
         }
+
+        private void btnExponen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
