@@ -54,6 +54,7 @@ namespace Calculator_2022
             this.btnExponen = new System.Windows.Forms.Button();
             this.btnSqaureRoot = new System.Windows.Forms.Button();
             this.btnModulo = new System.Windows.Forms.Button();
+            this.btnAbsolute = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDisplay
@@ -304,6 +305,17 @@ namespace Calculator_2022
             this.btnModulo.UseVisualStyleBackColor = true;
             this.btnModulo.Click += new System.EventHandler(this.btnModulo_Click);
             // 
+            // btnAbsolute
+            // 
+            this.btnAbsolute.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbsolute.Location = new System.Drawing.Point(511, 298);
+            this.btnAbsolute.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAbsolute.Name = "btnAbsolute";
+            this.btnAbsolute.Size = new System.Drawing.Size(64, 37);
+            this.btnAbsolute.TabIndex = 21;
+            this.btnAbsolute.Text = "|x|";
+            this.btnAbsolute.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -311,6 +323,7 @@ namespace Calculator_2022
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(681, 559);
+            this.Controls.Add(this.btnAbsolute);
             this.Controls.Add(this.btnModulo);
             this.Controls.Add(this.btnSqaureRoot);
             this.Controls.Add(this.btnExponen);
@@ -365,6 +378,7 @@ namespace Calculator_2022
         private System.Windows.Forms.Button btnExponen;
         private System.Windows.Forms.Button btnSqaureRoot;
         private System.Windows.Forms.Button btnModulo;
+        private System.Windows.Forms.Button btnAbsolute;
     }
 }
 
