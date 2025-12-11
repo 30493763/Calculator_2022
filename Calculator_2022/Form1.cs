@@ -210,13 +210,9 @@ namespace Calculator_2022
         private void resetAllOperationStatusToFalse()
         {
             bool[] clickedStatus = new bool[5] { plusButtonClicked, minusButtonClicked, multiplyButtonClicked, divideButtonClicked, exponentButtonClicked };
-
-            plusButtonClicked = false;
-            minusButtonClicked = false;
-            multiplyButtonClicked = false;
-            divideButtonClicked = false;
-            exponentButtonClicked = false;
-        }
+            for (int i = 0; i < clickedStatus.Length; i++)
+                clickedStatus[i] = false;
+        } // end of private method resetAllOperationStatusToFalse
 
         private void updateOperationStatus(char operation)
         {
