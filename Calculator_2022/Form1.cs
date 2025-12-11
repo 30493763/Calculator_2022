@@ -115,7 +115,7 @@ namespace Calculator_2022
         }
 
         //***********************************************
-        //   Event for the Minus button
+        //   Event for the Minus button   
         //************************************************
         private void btnMinus_Click(object sender, EventArgs e)
         {
