@@ -315,6 +315,7 @@ namespace Calculator_2022
             this.btnAbsolute.TabIndex = 21;
             this.btnAbsolute.Text = "|x|";
             this.btnAbsolute.UseVisualStyleBackColor = true;
+            this.btnAbsolute.Click += new System.EventHandler(this.btnAbsolute_Click);
             // 
             // Form1
             // 

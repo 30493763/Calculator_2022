@@ -166,6 +166,15 @@ namespace Calculator_2022
         }// end of btnRoot_Click event
 
         //***********************************************
+        //   Event for the Absolute button
+        //************************************************
+        private void btnAbsolute_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //***********************************************
         //   Event for the Equal button - calculates the total value
         //************************************************
         private void btnEqual_Click(object sender, EventArgs e)
@@ -259,6 +268,6 @@ namespace Calculator_2022
             }
         }// end of private method updateOperationStatus
 
-
+  
     }
 }
