@@ -60,7 +60,7 @@ namespace Calculator_2022
             // txtDisplay
             // 
             this.txtDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDisplay.BackColor = System.Drawing.SystemColors.MenuText;
+            this.txtDisplay.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtDisplay.Font = new System.Drawing.Font("Digital-7 Italic", 60F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDisplay.ForeColor = System.Drawing.SystemColors.Window;
             this.txtDisplay.Location = new System.Drawing.Point(5, 0);

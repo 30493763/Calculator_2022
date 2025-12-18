@@ -39,57 +39,90 @@ namespace Calculator_2022
         //**************************************************
         private void btnOne_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text+btnOne.Text;
+            if (displayIsOperator())
+                txtDisplay.Text = btnOne.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnOne.Text;
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text + btnTwo.Text;
+            if (displayIsOperator())
+                txtDisplay.Text = btnTwo.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnTwo.Text;
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text + btnThree.Text;
+            if (displayIsOperator())
+                txtDisplay.Text = btnThree.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnThree.Text;
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text + btnFour.Text;
+            if (displayIsOperator())
+                txtDisplay.Text = btnFour.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnFour.Text;
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text + btnFive.Text;
+            if (displayIsOperator())
+                txtDisplay.Text = btnFive.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnFive.Text;
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text + btnSix.Text;
+            if (displayIsOperator())
+                txtDisplay.Text = btnSix.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnSix.Text;
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text + btnSeven.Text;
+            if (displayIsOperator())
+                txtDisplay.Text = btnSeven.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnSeven.Text;
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text + btnEight.Text;
+            if (displayIsOperator())
+                txtDisplay.Text = btnEight.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnEight.Text;
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text + btnNine.Text;
+            if (displayIsOperator())
+                txtDisplay.Text = btnNine.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnNine.Text;
         }
 
         private void btnZero_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text + btnZero.Text;
+            if (displayIsOperator())
+                txtDisplay.Text = btnZero.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnZero.Text;
         }
 
         private void btnDot_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text + btnDot.Text;
+            if (displayIsOperator())
+                txtDisplay.Text = btnDot.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnDot.Text;
         }
 
         //******************************************************
@@ -110,6 +143,7 @@ namespace Calculator_2022
         {
             getOperandValueAndClearDisplay();
             updateOperationStatus('+');
+            txtDisplay.Text = "+";
         }
 
         //***********************************************
@@ -125,6 +159,8 @@ namespace Calculator_2022
 
             getOperandValueAndClearDisplay();
             updateOperationStatus('-');
+            txtDisplay.Text = "-";
+
         }
 
         //***********************************************
@@ -134,6 +170,7 @@ namespace Calculator_2022
         {
             getOperandValueAndClearDisplay();
             updateOperationStatus('*');
+            txtDisplay.Text = "*";
         }
 
         //***********************************************
@@ -143,6 +180,7 @@ namespace Calculator_2022
         {
             getOperandValueAndClearDisplay();
             updateOperationStatus('/');
+            txtDisplay.Text = "/";
         }
 
 
@@ -208,11 +246,6 @@ namespace Calculator_2022
             {
                 total2 = total1 % double.Parse(txtDisplay.Text);
             }
-            //else if (absoluteButtonClicked)
-            //{
-            //    total2 = Math.Abs(double.Parse(txtDisplay.Text));
-
-            //}
 
             txtDisplay.Text = total2.ToString();//display the total value
             total1 = 0;//start from the beginning
@@ -256,6 +289,17 @@ namespace Calculator_2022
             for (int i = 0; i < clickedStatus.Length; i++)
                 clickedStatus[i] = false;
         } // end of private method resetAllOperationStatusToFalse
+
+        private bool displayIsOperator() {
+            {
+                if (txtDisplay.Text == "+" || txtDisplay.Text == "-" || txtDisplay.Text == "*" || txtDisplay.Text == "/" || txtDisplay.Text == "^" || txtDisplay.Text == "%")
+                    return true;
+                else
+                {
+                    return false;
+                }
+            }
+        }
 
         private void updateOperationStatus(char operation)
         {
