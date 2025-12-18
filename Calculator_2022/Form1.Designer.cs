@@ -75,7 +75,7 @@ namespace Calculator_2022
             this.btnOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOne.Location = new System.Drawing.Point(12, 222);
             this.btnOne.Name = "btnOne";
-            this.btnOne.Size = new System.Drawing.Size(48, 30);
+            this.btnOne.Size = new System.Drawing.Size(80, 60);
             this.btnOne.TabIndex = 1;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@ namespace Calculator_2022
             this.btnTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTwo.Location = new System.Drawing.Point(81, 222);
             this.btnTwo.Name = "btnTwo";
-            this.btnTwo.Size = new System.Drawing.Size(48, 30);
+            this.btnTwo.Size = new System.Drawing.Size(80, 60);
             this.btnTwo.TabIndex = 2;
             this.btnTwo.Text = "2";
             this.btnTwo.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@ namespace Calculator_2022
             this.btnThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThree.Location = new System.Drawing.Point(156, 222);
             this.btnThree.Name = "btnThree";
-            this.btnThree.Size = new System.Drawing.Size(48, 30);
+            this.btnThree.Size = new System.Drawing.Size(80, 60);
             this.btnThree.TabIndex = 3;
             this.btnThree.Text = "3";
             this.btnThree.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@ namespace Calculator_2022
             this.btnFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFour.Location = new System.Drawing.Point(12, 294);
             this.btnFour.Name = "btnFour";
-            this.btnFour.Size = new System.Drawing.Size(48, 30);
+            this.btnFour.Size = new System.Drawing.Size(80, 60);
             this.btnFour.TabIndex = 4;
             this.btnFour.Text = "4";
             this.btnFour.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@ namespace Calculator_2022
             this.btnFive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFive.Location = new System.Drawing.Point(81, 294);
             this.btnFive.Name = "btnFive";
-            this.btnFive.Size = new System.Drawing.Size(48, 30);
+            this.btnFive.Size = new System.Drawing.Size(80, 60);
             this.btnFive.TabIndex = 5;
             this.btnFive.Text = "5";
             this.btnFive.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@ namespace Calculator_2022
             this.btnSix.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSix.Location = new System.Drawing.Point(156, 294);
             this.btnSix.Name = "btnSix";
-            this.btnSix.Size = new System.Drawing.Size(48, 30);
+            this.btnSix.Size = new System.Drawing.Size(80, 60);
             this.btnSix.TabIndex = 6;
             this.btnSix.Text = "6";
             this.btnSix.UseVisualStyleBackColor = true;
@@ -141,7 +141,7 @@ namespace Calculator_2022
             this.btnSeven.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeven.Location = new System.Drawing.Point(12, 361);
             this.btnSeven.Name = "btnSeven";
-            this.btnSeven.Size = new System.Drawing.Size(48, 30);
+            this.btnSeven.Size = new System.Drawing.Size(80, 60);
             this.btnSeven.TabIndex = 7;
             this.btnSeven.Text = "7";
             this.btnSeven.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@ namespace Calculator_2022
             this.btnEight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEight.Location = new System.Drawing.Point(81, 361);
             this.btnEight.Name = "btnEight";
-            this.btnEight.Size = new System.Drawing.Size(48, 30);
+            this.btnEight.Size = new System.Drawing.Size(80, 60);
             this.btnEight.TabIndex = 8;
             this.btnEight.Text = "8";
             this.btnEight.UseVisualStyleBackColor = true;
@@ -163,7 +163,7 @@ namespace Calculator_2022
             this.btnNine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNine.Location = new System.Drawing.Point(156, 361);
             this.btnNine.Name = "btnNine";
-            this.btnNine.Size = new System.Drawing.Size(48, 30);
+            this.btnNine.Size = new System.Drawing.Size(80, 60);
             this.btnNine.TabIndex = 9;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@ namespace Calculator_2022
             this.btnZero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZero.Location = new System.Drawing.Point(81, 423);
             this.btnZero.Name = "btnZero";
-            this.btnZero.Size = new System.Drawing.Size(48, 30);
+            this.btnZero.Size = new System.Drawing.Size(80, 60);
             this.btnZero.TabIndex = 10;
             this.btnZero.Text = "0";
             this.btnZero.UseVisualStyleBackColor = false;
@@ -185,7 +185,7 @@ namespace Calculator_2022
             this.btnDot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDot.Location = new System.Drawing.Point(156, 423);
             this.btnDot.Name = "btnDot";
-            this.btnDot.Size = new System.Drawing.Size(48, 30);
+            this.btnDot.Size = new System.Drawing.Size(80, 60);
             this.btnDot.TabIndex = 11;
             this.btnDot.Text = ".";
             this.btnDot.UseVisualStyleBackColor = true;
@@ -196,7 +196,7 @@ namespace Calculator_2022
             this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlus.Location = new System.Drawing.Point(267, 222);
             this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(48, 30);
+            this.btnPlus.Size = new System.Drawing.Size(80, 60);
             this.btnPlus.TabIndex = 12;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
@@ -207,7 +207,7 @@ namespace Calculator_2022
             this.btnEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEqual.Location = new System.Drawing.Point(267, 423);
             this.btnEqual.Name = "btnEqual";
-            this.btnEqual.Size = new System.Drawing.Size(48, 30);
+            this.btnEqual.Size = new System.Drawing.Size(80, 60);
             this.btnEqual.TabIndex = 13;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = true;
@@ -218,7 +218,7 @@ namespace Calculator_2022
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Location = new System.Drawing.Point(12, 423);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(48, 30);
+            this.btnClear.Size = new System.Drawing.Size(80, 60);
             this.btnClear.TabIndex = 14;
             this.btnClear.Text = "Clr";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@ namespace Calculator_2022
             this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinus.Location = new System.Drawing.Point(267, 271);
             this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(48, 30);
+            this.btnMinus.Size = new System.Drawing.Size(80, 60);
             this.btnMinus.TabIndex = 15;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
@@ -240,7 +240,7 @@ namespace Calculator_2022
             this.btnMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMultiply.Location = new System.Drawing.Point(267, 316);
             this.btnMultiply.Name = "btnMultiply";
-            this.btnMultiply.Size = new System.Drawing.Size(48, 30);
+            this.btnMultiply.Size = new System.Drawing.Size(80, 60);
             this.btnMultiply.TabIndex = 16;
             this.btnMultiply.Text = "*";
             this.btnMultiply.UseVisualStyleBackColor = true;
@@ -251,7 +251,7 @@ namespace Calculator_2022
             this.btnDivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDivision.Location = new System.Drawing.Point(267, 361);
             this.btnDivision.Name = "btnDivision";
-            this.btnDivision.Size = new System.Drawing.Size(48, 30);
+            this.btnDivision.Size = new System.Drawing.Size(80, 60);
             this.btnDivision.TabIndex = 17;
             this.btnDivision.Text = "/";
             this.btnDivision.UseVisualStyleBackColor = true;
@@ -262,7 +262,7 @@ namespace Calculator_2022
             this.btnExponen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExponen.Location = new System.Drawing.Point(342, 222);
             this.btnExponen.Name = "btnExponen";
-            this.btnExponen.Size = new System.Drawing.Size(48, 30);
+            this.btnExponen.Size = new System.Drawing.Size(80, 60);
             this.btnExponen.TabIndex = 18;
             this.btnExponen.Text = "^";
             this.btnExponen.UseVisualStyleBackColor = true;
@@ -273,7 +273,7 @@ namespace Calculator_2022
             this.btnSqaureRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSqaureRoot.Location = new System.Drawing.Point(342, 271);
             this.btnSqaureRoot.Name = "btnSqaureRoot";
-            this.btnSqaureRoot.Size = new System.Drawing.Size(48, 30);
+            this.btnSqaureRoot.Size = new System.Drawing.Size(80, 60);
             this.btnSqaureRoot.TabIndex = 19;
             this.btnSqaureRoot.Text = "√";
             this.btnSqaureRoot.UseVisualStyleBackColor = true;
@@ -284,7 +284,7 @@ namespace Calculator_2022
             this.btnModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModulo.Location = new System.Drawing.Point(342, 316);
             this.btnModulo.Name = "btnModulo";
-            this.btnModulo.Size = new System.Drawing.Size(48, 30);
+            this.btnModulo.Size = new System.Drawing.Size(80, 60);
             this.btnModulo.TabIndex = 20;
             this.btnModulo.Text = "%";
             this.btnModulo.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@ namespace Calculator_2022
             this.btnAbsolute.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbsolute.Location = new System.Drawing.Point(342, 361);
             this.btnAbsolute.Name = "btnAbsolute";
-            this.btnAbsolute.Size = new System.Drawing.Size(48, 30);
+            this.btnAbsolute.Size = new System.Drawing.Size(80, 60);
             this.btnAbsolute.TabIndex = 21;
             this.btnAbsolute.Text = "|x|";
             this.btnAbsolute.UseVisualStyleBackColor = true;
