@@ -329,7 +329,7 @@ namespace Calculator_2022
             this.btnAbsolute.Name = "btnAbsolute";
             this.btnAbsolute.Size = new System.Drawing.Size(80, 60);
             this.btnAbsolute.TabIndex = 21;
-            this.btnAbsolute.Text = "|x|";
+            this.btnAbsolute.Text = "ABS";
             this.btnAbsolute.UseVisualStyleBackColor = false;
             this.btnAbsolute.Click += new System.EventHandler(this.btnAbsolute_Click);
             // 
