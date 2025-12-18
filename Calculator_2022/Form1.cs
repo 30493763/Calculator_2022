@@ -39,7 +39,7 @@ namespace Calculator_2022
         //**************************************************
         private void btnOne_Click(object sender, EventArgs e)
         {
-            if (displayIsOperator())
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnOne.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnOne.Text;
@@ -47,7 +47,7 @@ namespace Calculator_2022
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
-            if (displayIsOperator())
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnTwo.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnTwo.Text;
@@ -55,7 +55,7 @@ namespace Calculator_2022
 
         private void btnThree_Click(object sender, EventArgs e)
         {
-            if (displayIsOperator())
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnThree.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnThree.Text;
@@ -63,7 +63,7 @@ namespace Calculator_2022
 
         private void btnFour_Click(object sender, EventArgs e)
         {
-            if (displayIsOperator())
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnFour.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnFour.Text;
@@ -71,7 +71,7 @@ namespace Calculator_2022
 
         private void btnFive_Click(object sender, EventArgs e)
         {
-            if (displayIsOperator())
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnFive.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnFive.Text;
@@ -79,7 +79,7 @@ namespace Calculator_2022
 
         private void btnSix_Click(object sender, EventArgs e)
         {
-            if (displayIsOperator())
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnSix.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnSix.Text;
@@ -87,7 +87,7 @@ namespace Calculator_2022
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
-            if (displayIsOperator())
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnSeven.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnSeven.Text;
@@ -95,7 +95,7 @@ namespace Calculator_2022
 
         private void btnEight_Click(object sender, EventArgs e)
         {
-            if (displayIsOperator())
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnEight.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnEight.Text;
@@ -103,7 +103,7 @@ namespace Calculator_2022
 
         private void btnNine_Click(object sender, EventArgs e)
         {
-            if (displayIsOperator())
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnNine.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnNine.Text;
@@ -111,7 +111,7 @@ namespace Calculator_2022
 
         private void btnZero_Click(object sender, EventArgs e)
         {
-            if (displayIsOperator())
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnZero.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnZero.Text;
@@ -119,7 +119,7 @@ namespace Calculator_2022
 
         private void btnDot_Click(object sender, EventArgs e)
         {
-            if (displayIsOperator())
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnDot.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnDot.Text;
@@ -134,6 +134,7 @@ namespace Calculator_2022
             total1 = 0;
             total2=0;
             updateOperationStatus(default);
+            txtDisplay.Text = "0";
         }
 
         //***********************************************
@@ -191,6 +192,7 @@ namespace Calculator_2022
         {
             getOperandValueAndClearDisplay();
             updateOperationStatus('^');
+            txtDisplay.Text = "^";
 
         }// end of btnExponen_Click event
 
@@ -201,6 +203,7 @@ namespace Calculator_2022
         {
             getOperandValueAndClearDisplay();
             updateOperationStatus('%');
+            txtDisplay.Text = "%";
         }
 
 
@@ -290,9 +293,9 @@ namespace Calculator_2022
                 clickedStatus[i] = false;
         } // end of private method resetAllOperationStatusToFalse
 
-        private bool displayIsOperator() {
+        private bool displayIsOperatorOrZero() {
             {
-                if (txtDisplay.Text == "+" || txtDisplay.Text == "-" || txtDisplay.Text == "*" || txtDisplay.Text == "/" || txtDisplay.Text == "^" || txtDisplay.Text == "%")
+                if (txtDisplay.Text == "+" || txtDisplay.Text == "-" || txtDisplay.Text == "*" || txtDisplay.Text == "/" || txtDisplay.Text == "^" || txtDisplay.Text == "%" || txtDisplay.Text == "0")
                     return true;
                 else
                 {

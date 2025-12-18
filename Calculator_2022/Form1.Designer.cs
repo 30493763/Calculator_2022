@@ -68,7 +68,7 @@ namespace Calculator_2022
             this.txtDisplay.Name = "txtDisplay";
             this.txtDisplay.Size = new System.Drawing.Size(480, 89);
             this.txtDisplay.TabIndex = 0;
-            this.txtDisplay.Text = "123.56";
+            this.txtDisplay.Text = "0";
             this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnOne
