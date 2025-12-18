@@ -54,23 +54,22 @@ namespace Calculator_2022
             this.btnExponen = new System.Windows.Forms.Button();
             this.btnSqaureRoot = new System.Windows.Forms.Button();
             this.btnModulo = new System.Windows.Forms.Button();
+            this.btnAbsolute = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDisplay
             // 
-            this.txtDisplay.Location = new System.Drawing.Point(71, 50);
-            this.txtDisplay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDisplay.Location = new System.Drawing.Point(53, 41);
             this.txtDisplay.Name = "txtDisplay";
-            this.txtDisplay.Size = new System.Drawing.Size(265, 22);
+            this.txtDisplay.Size = new System.Drawing.Size(200, 20);
             this.txtDisplay.TabIndex = 0;
             // 
             // btnOne
             // 
             this.btnOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOne.Location = new System.Drawing.Point(71, 127);
-            this.btnOne.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOne.Location = new System.Drawing.Point(53, 103);
             this.btnOne.Name = "btnOne";
-            this.btnOne.Size = new System.Drawing.Size(64, 37);
+            this.btnOne.Size = new System.Drawing.Size(48, 30);
             this.btnOne.TabIndex = 1;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = true;
@@ -79,10 +78,9 @@ namespace Calculator_2022
             // btnTwo
             // 
             this.btnTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTwo.Location = new System.Drawing.Point(163, 127);
-            this.btnTwo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTwo.Location = new System.Drawing.Point(122, 103);
             this.btnTwo.Name = "btnTwo";
-            this.btnTwo.Size = new System.Drawing.Size(64, 37);
+            this.btnTwo.Size = new System.Drawing.Size(48, 30);
             this.btnTwo.TabIndex = 2;
             this.btnTwo.Text = "2";
             this.btnTwo.UseVisualStyleBackColor = true;
@@ -91,10 +89,9 @@ namespace Calculator_2022
             // btnThree
             // 
             this.btnThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThree.Location = new System.Drawing.Point(263, 127);
-            this.btnThree.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThree.Location = new System.Drawing.Point(197, 103);
             this.btnThree.Name = "btnThree";
-            this.btnThree.Size = new System.Drawing.Size(64, 37);
+            this.btnThree.Size = new System.Drawing.Size(48, 30);
             this.btnThree.TabIndex = 3;
             this.btnThree.Text = "3";
             this.btnThree.UseVisualStyleBackColor = true;
@@ -103,10 +100,9 @@ namespace Calculator_2022
             // btnFour
             // 
             this.btnFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFour.Location = new System.Drawing.Point(71, 215);
-            this.btnFour.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFour.Location = new System.Drawing.Point(53, 175);
             this.btnFour.Name = "btnFour";
-            this.btnFour.Size = new System.Drawing.Size(64, 37);
+            this.btnFour.Size = new System.Drawing.Size(48, 30);
             this.btnFour.TabIndex = 4;
             this.btnFour.Text = "4";
             this.btnFour.UseVisualStyleBackColor = true;
@@ -115,10 +111,9 @@ namespace Calculator_2022
             // btnFive
             // 
             this.btnFive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFive.Location = new System.Drawing.Point(163, 215);
-            this.btnFive.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFive.Location = new System.Drawing.Point(122, 175);
             this.btnFive.Name = "btnFive";
-            this.btnFive.Size = new System.Drawing.Size(64, 37);
+            this.btnFive.Size = new System.Drawing.Size(48, 30);
             this.btnFive.TabIndex = 5;
             this.btnFive.Text = "5";
             this.btnFive.UseVisualStyleBackColor = true;
@@ -127,10 +122,9 @@ namespace Calculator_2022
             // btnSix
             // 
             this.btnSix.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSix.Location = new System.Drawing.Point(263, 215);
-            this.btnSix.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSix.Location = new System.Drawing.Point(197, 175);
             this.btnSix.Name = "btnSix";
-            this.btnSix.Size = new System.Drawing.Size(64, 37);
+            this.btnSix.Size = new System.Drawing.Size(48, 30);
             this.btnSix.TabIndex = 6;
             this.btnSix.Text = "6";
             this.btnSix.UseVisualStyleBackColor = true;
@@ -139,10 +133,9 @@ namespace Calculator_2022
             // btnSeven
             // 
             this.btnSeven.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeven.Location = new System.Drawing.Point(71, 298);
-            this.btnSeven.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeven.Location = new System.Drawing.Point(53, 242);
             this.btnSeven.Name = "btnSeven";
-            this.btnSeven.Size = new System.Drawing.Size(64, 37);
+            this.btnSeven.Size = new System.Drawing.Size(48, 30);
             this.btnSeven.TabIndex = 7;
             this.btnSeven.Text = "7";
             this.btnSeven.UseVisualStyleBackColor = true;
@@ -151,10 +144,9 @@ namespace Calculator_2022
             // btnEight
             // 
             this.btnEight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEight.Location = new System.Drawing.Point(163, 298);
-            this.btnEight.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEight.Location = new System.Drawing.Point(122, 242);
             this.btnEight.Name = "btnEight";
-            this.btnEight.Size = new System.Drawing.Size(64, 37);
+            this.btnEight.Size = new System.Drawing.Size(48, 30);
             this.btnEight.TabIndex = 8;
             this.btnEight.Text = "8";
             this.btnEight.UseVisualStyleBackColor = true;
@@ -163,10 +155,9 @@ namespace Calculator_2022
             // btnNine
             // 
             this.btnNine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNine.Location = new System.Drawing.Point(263, 298);
-            this.btnNine.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNine.Location = new System.Drawing.Point(197, 242);
             this.btnNine.Name = "btnNine";
-            this.btnNine.Size = new System.Drawing.Size(64, 37);
+            this.btnNine.Size = new System.Drawing.Size(48, 30);
             this.btnNine.TabIndex = 9;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = true;
@@ -175,10 +166,9 @@ namespace Calculator_2022
             // btnZero
             // 
             this.btnZero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZero.Location = new System.Drawing.Point(163, 374);
-            this.btnZero.Margin = new System.Windows.Forms.Padding(4);
+            this.btnZero.Location = new System.Drawing.Point(122, 304);
             this.btnZero.Name = "btnZero";
-            this.btnZero.Size = new System.Drawing.Size(64, 37);
+            this.btnZero.Size = new System.Drawing.Size(48, 30);
             this.btnZero.TabIndex = 10;
             this.btnZero.Text = "0";
             this.btnZero.UseVisualStyleBackColor = false;
@@ -187,10 +177,9 @@ namespace Calculator_2022
             // btnDot
             // 
             this.btnDot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDot.Location = new System.Drawing.Point(263, 374);
-            this.btnDot.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDot.Location = new System.Drawing.Point(197, 304);
             this.btnDot.Name = "btnDot";
-            this.btnDot.Size = new System.Drawing.Size(64, 37);
+            this.btnDot.Size = new System.Drawing.Size(48, 30);
             this.btnDot.TabIndex = 11;
             this.btnDot.Text = ".";
             this.btnDot.UseVisualStyleBackColor = true;
@@ -199,10 +188,9 @@ namespace Calculator_2022
             // btnPlus
             // 
             this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlus.Location = new System.Drawing.Point(411, 127);
-            this.btnPlus.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPlus.Location = new System.Drawing.Point(308, 103);
             this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(64, 37);
+            this.btnPlus.Size = new System.Drawing.Size(48, 30);
             this.btnPlus.TabIndex = 12;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
@@ -211,10 +199,9 @@ namespace Calculator_2022
             // btnEqual
             // 
             this.btnEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEqual.Location = new System.Drawing.Point(411, 374);
-            this.btnEqual.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEqual.Location = new System.Drawing.Point(308, 304);
             this.btnEqual.Name = "btnEqual";
-            this.btnEqual.Size = new System.Drawing.Size(64, 37);
+            this.btnEqual.Size = new System.Drawing.Size(48, 30);
             this.btnEqual.TabIndex = 13;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = true;
@@ -223,10 +210,9 @@ namespace Calculator_2022
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(57, 374);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClear.Location = new System.Drawing.Point(43, 304);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(77, 37);
+            this.btnClear.Size = new System.Drawing.Size(58, 30);
             this.btnClear.TabIndex = 14;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -235,10 +221,9 @@ namespace Calculator_2022
             // btnMinus
             // 
             this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinus.Location = new System.Drawing.Point(411, 187);
-            this.btnMinus.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinus.Location = new System.Drawing.Point(308, 152);
             this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(64, 37);
+            this.btnMinus.Size = new System.Drawing.Size(48, 30);
             this.btnMinus.TabIndex = 15;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
@@ -247,10 +232,9 @@ namespace Calculator_2022
             // btnMultiply
             // 
             this.btnMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMultiply.Location = new System.Drawing.Point(411, 242);
-            this.btnMultiply.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMultiply.Location = new System.Drawing.Point(308, 197);
             this.btnMultiply.Name = "btnMultiply";
-            this.btnMultiply.Size = new System.Drawing.Size(64, 37);
+            this.btnMultiply.Size = new System.Drawing.Size(48, 30);
             this.btnMultiply.TabIndex = 16;
             this.btnMultiply.Text = "*";
             this.btnMultiply.UseVisualStyleBackColor = true;
@@ -259,10 +243,9 @@ namespace Calculator_2022
             // btnDivision
             // 
             this.btnDivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDivision.Location = new System.Drawing.Point(411, 298);
-            this.btnDivision.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDivision.Location = new System.Drawing.Point(308, 242);
             this.btnDivision.Name = "btnDivision";
-            this.btnDivision.Size = new System.Drawing.Size(64, 37);
+            this.btnDivision.Size = new System.Drawing.Size(48, 30);
             this.btnDivision.TabIndex = 17;
             this.btnDivision.Text = "/";
             this.btnDivision.UseVisualStyleBackColor = true;
@@ -271,10 +254,9 @@ namespace Calculator_2022
             // btnExponen
             // 
             this.btnExponen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExponen.Location = new System.Drawing.Point(511, 127);
-            this.btnExponen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExponen.Location = new System.Drawing.Point(383, 103);
             this.btnExponen.Name = "btnExponen";
-            this.btnExponen.Size = new System.Drawing.Size(64, 37);
+            this.btnExponen.Size = new System.Drawing.Size(48, 30);
             this.btnExponen.TabIndex = 18;
             this.btnExponen.Text = "^";
             this.btnExponen.UseVisualStyleBackColor = true;
@@ -283,10 +265,9 @@ namespace Calculator_2022
             // btnSqaureRoot
             // 
             this.btnSqaureRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSqaureRoot.Location = new System.Drawing.Point(511, 187);
-            this.btnSqaureRoot.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSqaureRoot.Location = new System.Drawing.Point(383, 152);
             this.btnSqaureRoot.Name = "btnSqaureRoot";
-            this.btnSqaureRoot.Size = new System.Drawing.Size(64, 37);
+            this.btnSqaureRoot.Size = new System.Drawing.Size(48, 30);
             this.btnSqaureRoot.TabIndex = 19;
             this.btnSqaureRoot.Text = "√";
             this.btnSqaureRoot.UseVisualStyleBackColor = true;
@@ -295,22 +276,33 @@ namespace Calculator_2022
             // btnModulo
             // 
             this.btnModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModulo.Location = new System.Drawing.Point(511, 242);
-            this.btnModulo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModulo.Location = new System.Drawing.Point(383, 197);
             this.btnModulo.Name = "btnModulo";
-            this.btnModulo.Size = new System.Drawing.Size(64, 37);
+            this.btnModulo.Size = new System.Drawing.Size(48, 30);
             this.btnModulo.TabIndex = 20;
             this.btnModulo.Text = "%";
             this.btnModulo.UseVisualStyleBackColor = true;
             this.btnModulo.Click += new System.EventHandler(this.btnModulo_Click);
             // 
+            // btnAbsolute
+            // 
+            this.btnAbsolute.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbsolute.Location = new System.Drawing.Point(383, 242);
+            this.btnAbsolute.Name = "btnAbsolute";
+            this.btnAbsolute.Size = new System.Drawing.Size(48, 30);
+            this.btnAbsolute.TabIndex = 21;
+            this.btnAbsolute.Text = "|x|";
+            this.btnAbsolute.UseVisualStyleBackColor = true;
+            this.btnAbsolute.Click += new System.EventHandler(this.btnAbsolute_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(681, 559);
+            this.ClientSize = new System.Drawing.Size(511, 454);
+            this.Controls.Add(this.btnAbsolute);
             this.Controls.Add(this.btnModulo);
             this.Controls.Add(this.btnSqaureRoot);
             this.Controls.Add(this.btnExponen);
@@ -333,7 +325,6 @@ namespace Calculator_2022
             this.Controls.Add(this.btnOne);
             this.Controls.Add(this.txtDisplay);
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Calculator";
             this.ResumeLayout(false);
@@ -365,6 +356,7 @@ namespace Calculator_2022
         private System.Windows.Forms.Button btnExponen;
         private System.Windows.Forms.Button btnSqaureRoot;
         private System.Windows.Forms.Button btnModulo;
+        private System.Windows.Forms.Button btnAbsolute;
     }
 }
 

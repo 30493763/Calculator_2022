@@ -26,6 +26,7 @@ namespace Calculator_2022
         bool multiplyButtonClicked = false;
         bool exponentButtonClicked = false;
         bool moduloButtonClicked = false;
+        bool absoluteButtonClicked = false;
 
         //****************************************************
         public Form1()
@@ -116,6 +117,12 @@ namespace Calculator_2022
         //************************************************
         private void btnMinus_Click(object sender, EventArgs e)
         {
+            if (txtDisplay.Text == "")
+            {
+                txtDisplay.Text = "-";
+                return;
+            };
+
             getOperandValueAndClearDisplay();
             updateOperationStatus('-');
         }
@@ -158,13 +165,19 @@ namespace Calculator_2022
             updateOperationStatus('%');
         }
 
-        //***********************************************
-        //   Event for the Square Root button
-        //************************************************
+
         private void btnSqaureRoot_Click(object sender, EventArgs e)
         {
             txtDisplay.Text = Math.Sqrt(double.Parse(txtDisplay.Text)).ToString();
         }// end of btnRoot_Click event
+
+        //***********************************************
+        //   Event for the Absolute button
+        //************************************************
+        private void btnAbsolute_Click(object sender, EventArgs e)
+        {
+            txtDisplay.Text = Math.Abs(double.Parse(txtDisplay.Text)).ToString();
+        }// end of btnAbsolute_Click event
 
         //***********************************************
         //   Event for the Equal button - calculates the total value
@@ -195,6 +208,11 @@ namespace Calculator_2022
             {
                 total2 = total1 % double.Parse(txtDisplay.Text);
             }
+            //else if (absoluteButtonClicked)
+            //{
+            //    total2 = Math.Abs(double.Parse(txtDisplay.Text));
+
+            //}
 
             txtDisplay.Text = total2.ToString();//display the total value
             total1 = 0;//start from the beginning
@@ -226,7 +244,15 @@ namespace Calculator_2022
 
         private void resetAllOperationStatusToFalse()
         {
-            bool[] clickedStatus = new bool[6] { plusButtonClicked, minusButtonClicked, multiplyButtonClicked, divideButtonClicked, exponentButtonClicked, moduloButtonClicked };
+            bool[] clickedStatus = new bool[7] { 
+                plusButtonClicked, 
+                minusButtonClicked, 
+                multiplyButtonClicked, 
+                divideButtonClicked, 
+                exponentButtonClicked, 
+                moduloButtonClicked,
+                absoluteButtonClicked
+            };
             for (int i = 0; i < clickedStatus.Length; i++)
                 clickedStatus[i] = false;
         } // end of private method resetAllOperationStatusToFalse
@@ -255,11 +281,13 @@ namespace Calculator_2022
                 case '%':
                     moduloButtonClicked = true;
                     break;
+                case 'A':
+                    absoluteButtonClicked = true;
+                    break;
                 default:
                     break;
             }
         }// end of private method updateOperationStatus
-
 
     }
 }
