@@ -196,7 +196,7 @@ namespace Calculator_2022
             // btnPlus
             // 
             this.btnPlus.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlus.Location = new System.Drawing.Point(293, 95);
+            this.btnPlus.Location = new System.Drawing.Point(385, 95);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(80, 40);
             this.btnPlus.TabIndex = 12;
@@ -207,7 +207,7 @@ namespace Calculator_2022
             // btnEqual
             // 
             this.btnEqual.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEqual.Location = new System.Drawing.Point(293, 279);
+            this.btnEqual.Location = new System.Drawing.Point(385, 279);
             this.btnEqual.Name = "btnEqual";
             this.btnEqual.Size = new System.Drawing.Size(80, 77);
             this.btnEqual.TabIndex = 13;
@@ -229,7 +229,7 @@ namespace Calculator_2022
             // btnMinus
             // 
             this.btnMinus.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinus.Location = new System.Drawing.Point(293, 141);
+            this.btnMinus.Location = new System.Drawing.Point(385, 141);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(80, 40);
             this.btnMinus.TabIndex = 15;
@@ -240,7 +240,7 @@ namespace Calculator_2022
             // btnMultiply
             // 
             this.btnMultiply.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMultiply.Location = new System.Drawing.Point(293, 187);
+            this.btnMultiply.Location = new System.Drawing.Point(385, 187);
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(80, 40);
             this.btnMultiply.TabIndex = 16;
@@ -251,7 +251,7 @@ namespace Calculator_2022
             // btnDivision
             // 
             this.btnDivision.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDivision.Location = new System.Drawing.Point(293, 233);
+            this.btnDivision.Location = new System.Drawing.Point(385, 233);
             this.btnDivision.Name = "btnDivision";
             this.btnDivision.Size = new System.Drawing.Size(80, 40);
             this.btnDivision.TabIndex = 17;
@@ -262,7 +262,7 @@ namespace Calculator_2022
             // btnExponen
             // 
             this.btnExponen.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExponen.Location = new System.Drawing.Point(387, 95);
+            this.btnExponen.Location = new System.Drawing.Point(297, 95);
             this.btnExponen.Name = "btnExponen";
             this.btnExponen.Size = new System.Drawing.Size(80, 60);
             this.btnExponen.TabIndex = 18;
@@ -273,7 +273,7 @@ namespace Calculator_2022
             // btnSqaureRoot
             // 
             this.btnSqaureRoot.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSqaureRoot.Location = new System.Drawing.Point(387, 166);
+            this.btnSqaureRoot.Location = new System.Drawing.Point(297, 166);
             this.btnSqaureRoot.Name = "btnSqaureRoot";
             this.btnSqaureRoot.Size = new System.Drawing.Size(80, 60);
             this.btnSqaureRoot.TabIndex = 19;
@@ -284,7 +284,7 @@ namespace Calculator_2022
             // btnModulo
             // 
             this.btnModulo.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModulo.Location = new System.Drawing.Point(387, 233);
+            this.btnModulo.Location = new System.Drawing.Point(297, 233);
             this.btnModulo.Name = "btnModulo";
             this.btnModulo.Size = new System.Drawing.Size(80, 60);
             this.btnModulo.TabIndex = 20;
@@ -295,7 +295,7 @@ namespace Calculator_2022
             // btnAbsolute
             // 
             this.btnAbsolute.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbsolute.Location = new System.Drawing.Point(387, 295);
+            this.btnAbsolute.Location = new System.Drawing.Point(297, 295);
             this.btnAbsolute.Name = "btnAbsolute";
             this.btnAbsolute.Size = new System.Drawing.Size(80, 60);
             this.btnAbsolute.TabIndex = 21;
