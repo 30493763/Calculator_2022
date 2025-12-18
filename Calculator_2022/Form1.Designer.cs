@@ -219,12 +219,12 @@ namespace Calculator_2022
             // 
             // btnEqual
             // 
-            this.btnEqual.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.btnEqual.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEqual.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnEqual.Font = new System.Drawing.Font("Digital-7 Italic", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEqual.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEqual.Location = new System.Drawing.Point(385, 279);
+            this.btnEqual.Location = new System.Drawing.Point(299, 279);
             this.btnEqual.Name = "btnEqual";
-            this.btnEqual.Size = new System.Drawing.Size(80, 77);
+            this.btnEqual.Size = new System.Drawing.Size(166, 77);
             this.btnEqual.TabIndex = 13;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = false;
@@ -288,7 +288,7 @@ namespace Calculator_2022
             this.btnExponen.ForeColor = System.Drawing.SystemColors.Control;
             this.btnExponen.Location = new System.Drawing.Point(297, 95);
             this.btnExponen.Name = "btnExponen";
-            this.btnExponen.Size = new System.Drawing.Size(80, 60);
+            this.btnExponen.Size = new System.Drawing.Size(80, 40);
             this.btnExponen.TabIndex = 18;
             this.btnExponen.Text = "^";
             this.btnExponen.UseVisualStyleBackColor = false;
@@ -299,9 +299,9 @@ namespace Calculator_2022
             this.btnSqaureRoot.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnSqaureRoot.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSqaureRoot.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSqaureRoot.Location = new System.Drawing.Point(297, 166);
+            this.btnSqaureRoot.Location = new System.Drawing.Point(299, 141);
             this.btnSqaureRoot.Name = "btnSqaureRoot";
-            this.btnSqaureRoot.Size = new System.Drawing.Size(80, 60);
+            this.btnSqaureRoot.Size = new System.Drawing.Size(80, 40);
             this.btnSqaureRoot.TabIndex = 19;
             this.btnSqaureRoot.Text = "√";
             this.btnSqaureRoot.UseVisualStyleBackColor = false;
@@ -312,9 +312,9 @@ namespace Calculator_2022
             this.btnModulo.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnModulo.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModulo.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnModulo.Location = new System.Drawing.Point(297, 233);
+            this.btnModulo.Location = new System.Drawing.Point(299, 187);
             this.btnModulo.Name = "btnModulo";
-            this.btnModulo.Size = new System.Drawing.Size(80, 60);
+            this.btnModulo.Size = new System.Drawing.Size(80, 40);
             this.btnModulo.TabIndex = 20;
             this.btnModulo.Text = "%";
             this.btnModulo.UseVisualStyleBackColor = false;
@@ -325,9 +325,9 @@ namespace Calculator_2022
             this.btnAbsolute.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnAbsolute.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbsolute.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAbsolute.Location = new System.Drawing.Point(297, 295);
+            this.btnAbsolute.Location = new System.Drawing.Point(299, 234);
             this.btnAbsolute.Name = "btnAbsolute";
-            this.btnAbsolute.Size = new System.Drawing.Size(80, 60);
+            this.btnAbsolute.Size = new System.Drawing.Size(80, 39);
             this.btnAbsolute.TabIndex = 21;
             this.btnAbsolute.Text = "ABS";
             this.btnAbsolute.UseVisualStyleBackColor = false;
