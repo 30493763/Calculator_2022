@@ -368,6 +368,7 @@ namespace Calculator_2022
             this.btnNegate.TabIndex = 22;
             this.btnNegate.Text = "+/-";
             this.btnNegate.UseVisualStyleBackColor = false;
+            this.btnNegate.Click += new System.EventHandler(this.btnNegate_Click);
             // 
             // txtNegate
             // 
@@ -380,7 +381,7 @@ namespace Calculator_2022
             this.txtNegate.Name = "txtNegate";
             this.txtNegate.Size = new System.Drawing.Size(100, 102);
             this.txtNegate.TabIndex = 23;
-            this.txtNegate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNegate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 

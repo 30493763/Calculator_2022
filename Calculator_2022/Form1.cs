@@ -28,6 +28,8 @@ namespace Calculator_2022
         bool moduloButtonClicked = false;
         bool absoluteButtonClicked = false;
 
+        bool negate = false;
+
         //****************************************************
         public Form1()
         {
@@ -197,12 +199,6 @@ namespace Calculator_2022
         //************************************************
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.Text == "")
-            {
-                txtDisplay.Text = "-";
-                return;
-            };
-
             getOperandValueAndClearDisplay();
             updateOperationStatus('-');
             txtDisplay.Text = "-";
@@ -297,6 +293,7 @@ namespace Calculator_2022
 
             txtDisplay.Text = total2.ToString();//display the total value
             total1 = 0;//start from the beginning
+            resetNegate();
         }
 
 
@@ -321,8 +318,14 @@ namespace Calculator_2022
         {
             if (displayIsOperatorOrZero())
                 return;
-            total1 = total1 + double.Parse(txtDisplay.Text);
+
+            if (negate)
+                total1 = total1 + (double.Parse(txtNegate.Text + txtDisplay.Text));
+            else
+                total1 = total1 + double.Parse(txtDisplay.Text);
+
             txtDisplay.Clear();
+            resetNegate();
         }
 
         private void resetAllOperationStatusToFalse()
@@ -335,6 +338,12 @@ namespace Calculator_2022
                 moduloButtonClicked= false;
                 absoluteButtonClicked = false;
         } // end of private method resetAllOperationStatusToFalse
+
+        private void resetNegate()
+        {
+            txtNegate.Text = "";
+            negate = false;
+        }// end of resetNegate method
 
         private bool displayIsOperatorOrZero() {
             {
@@ -378,6 +387,20 @@ namespace Calculator_2022
                     break;
             }
         }// end of private method updateOperationStatus
+
+        private void btnNegate_Click(object sender, EventArgs e)
+        {
+            if (negate)
+            {
+                txtNegate.Text = "";
+                negate = false;
+            }
+            else
+            {
+                txtNegate.Text = "-";
+                negate = true;
+            }
+        }// end of btnNegate_Click event
 
     }
 }
