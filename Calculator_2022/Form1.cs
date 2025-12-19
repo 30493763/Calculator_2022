@@ -181,6 +181,7 @@ namespace Calculator_2022
             total1 = 0;
             total2=0;
             resetAllOperationStatusToFalse();
+            resetNegate();  
             txtDisplay.Text = "0";
         }
 
@@ -190,6 +191,7 @@ namespace Calculator_2022
         private void btnPlus_Click(object sender, EventArgs e)
         {
             getOperandValueAndClearDisplay();
+            resetNegate();
             updateOperationStatus('+');
             txtDisplay.Text = "+";
         }
@@ -200,6 +202,7 @@ namespace Calculator_2022
         private void btnMinus_Click(object sender, EventArgs e)
         {
             getOperandValueAndClearDisplay();
+            resetNegate();
             updateOperationStatus('-');
             txtDisplay.Text = "-";
 
@@ -211,6 +214,7 @@ namespace Calculator_2022
         private void btnMultiply_Click(object sender, EventArgs e)
         {
             getOperandValueAndClearDisplay();
+            resetNegate();
             updateOperationStatus('*');
             txtDisplay.Text = "*";
         }
@@ -221,6 +225,7 @@ namespace Calculator_2022
         private void btnDivision_Click(object sender, EventArgs e)
         {
             getOperandValueAndClearDisplay();
+            resetNegate();
             updateOperationStatus('/');
             txtDisplay.Text = "/";
         }
@@ -268,32 +273,56 @@ namespace Calculator_2022
         {
             if (plusButtonClicked)
             {
-                total2 = total1 + double.Parse(txtDisplay.Text);
+                //total2 = total1 + double.Parse(txtDisplay.Text);
+                total2 = total1 + getValueFromDisplay();
+
             }
             else if (minusButtonClicked)
             {
-                total2 = total1 - double.Parse(txtDisplay.Text);
+                //total2 = total1 - double.Parse(txtDisplay.Text);
+                total2 = total1 - getValueFromDisplay();
+
             }
             else if (multiplyButtonClicked)
             {
-                total2 = total1 * double.Parse(txtDisplay.Text);
+                //total2 = total1 * double.Parse(txtDisplay.Text);
+                total2 = total1 * getValueFromDisplay();
+
             }
-           else if (divideButtonClicked)
+            else if (divideButtonClicked)
             {
-                total2 = total1/double.Parse(txtDisplay.Text);
+                //total2 = total1/double.Parse(txtDisplay.Text);
+                total2 = total1 / getValueFromDisplay();
+
             }
             else if (exponentButtonClicked)
             {
-                total2 = power(total1, double.Parse(txtDisplay.Text));
+                //total2 = power(total1, double.Parse(txtDisplay.Text));
+                total2 = power(total1, getValueFromDisplay() );
+
             }
             else if (moduloButtonClicked)
             {
-                total2 = total1 % double.Parse(txtDisplay.Text);
+                //total2 = total1 % double.Parse(txtDisplay.Text);
+                total2 = total1 % getValueFromDisplay();
             }
 
-            txtDisplay.Text = total2.ToString();//display the total value
+
+            if (total2 >=0)
+            {
+                txtDisplay.Text = total2.ToString();//display the total value
+                resetNegate();
+            }
+            if (total2 < 0)
+            {
+                txtDisplay.Text = (total2*-1).ToString();//display the total value
+
+                txtNegate.Text = "-";
+                negate = true;
+            }
+
             total1 = 0;//start from the beginning
-            resetNegate();
+            //resetNegate();
         }
 
 
@@ -326,6 +355,16 @@ namespace Calculator_2022
 
             txtDisplay.Clear();
             resetNegate();
+        }
+
+        private double getValueFromDisplay()
+        {
+            double value = 0;
+            if (negate)
+                value = double.Parse(txtNegate.Text + txtDisplay.Text);
+            else
+                value = double.Parse(txtDisplay.Text);
+            return value;
         }
 
         private void resetAllOperationStatusToFalse()
