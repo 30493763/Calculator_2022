@@ -263,7 +263,9 @@ namespace Calculator_2022
         //************************************************
         private void btnAbsolute_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = Math.Abs(double.Parse(txtDisplay.Text)).ToString();
+            txtDisplay.Text = (getValueFromDisplay()*-1).ToString();
+            resetNegate();  
+
         }// end of btnAbsolute_Click event
 
         //***********************************************
