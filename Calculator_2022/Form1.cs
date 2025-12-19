@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,9 +16,9 @@ namespace Calculator_2022
 {
     public partial class Form1 : Form
     {
-        //***********************************************
-        //         global variables
-        //**********************************************
+        //***********************************************************************************************************************************
+        //        GLOBAL VARIABLES
+        //***********************************************************************************************************************************
         double total1 = 0;
         double total2 = 0;
         bool plusButtonClicked = false;
@@ -30,35 +31,33 @@ namespace Calculator_2022
 
         bool negate = false;
 
-        //****************************************************
+        //***********************************************************************************************************************************
+
         public Form1()
         {
             InitializeComponent();
         }
+
+
+        //***********************************************************************************************************************************
+        //         CLICK EVENTS
+        //***********************************************************************************************************************************
+
 
         //**************************************************
         //       Events for each number button
         //**************************************************
         private void btnOne_Click(object sender, EventArgs e)
         {
-            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-            //    txtDisplay.Text = txtDisplay.Text + btnOne.Text;
-            //else
-            //    txtDisplay.Text = btnOne.Text;
-            if (displayIsOperatorOrZero())
+            if (ifDisplayIsOperatorOrZero())
                 txtDisplay.Text = btnOne.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnOne.Text;
-
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
-            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-            //    txtDisplay.Text = txtDisplay.Text + btnTwo.Text;
-            //else
-            //    txtDisplay.Text = btnTwo.Text;
-            if (displayIsOperatorOrZero())
+            if (ifDisplayIsOperatorOrZero())
                 txtDisplay.Text = btnTwo.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnTwo.Text;
@@ -66,107 +65,71 @@ namespace Calculator_2022
 
         private void btnThree_Click(object sender, EventArgs e)
         {
-            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-            //    txtDisplay.Text = txtDisplay.Text + btnThree.Text;
-            //else
-            //    txtDisplay.Text = btnThree.Text;
-            if (displayIsOperatorOrZero())
+            if (ifDisplayIsOperatorOrZero())
                 txtDisplay.Text = btnThree.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnThree.Text;
-
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
-            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-            //    txtDisplay.Text = txtDisplay.Text + btnFour.Text;
-            //else
-            //    txtDisplay.Text = btnFour.Text;
-            if (displayIsOperatorOrZero())
+            if (ifDisplayIsOperatorOrZero())
                 txtDisplay.Text = btnFour.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnFour.Text;
-
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
-            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-            //    txtDisplay.Text = txtDisplay.Text + btnFive.Text;
-            //else
-            //    txtDisplay.Text = btnFive.Text;
-            if (displayIsOperatorOrZero())
+            if (ifDisplayIsOperatorOrZero())
                 txtDisplay.Text = btnFive.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnFive.Text;
-
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
-            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-            //    txtDisplay.Text = txtDisplay.Text + btnSix.Text;
-            //else
-            //    txtDisplay.Text = btnSix.Text;
-            if (displayIsOperatorOrZero())
+            if (ifDisplayIsOperatorOrZero())
                 txtDisplay.Text = btnSix.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnSix.Text;
-
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
-            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-            //    txtDisplay.Text = txtDisplay.Text + btnSeven.Text;
-            //else
-            //    txtDisplay.Text = btnSeven.Text;
-            if (displayIsOperatorOrZero())
+            if (ifDisplayIsOperatorOrZero())
                 txtDisplay.Text = btnSeven.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnSeven.Text;
-
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
-            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-            //    txtDisplay.Text = txtDisplay.Text + btnEight.Text;
-            //else
-            //    txtDisplay.Text = btnEight.Text;
-            if (displayIsOperatorOrZero())
+            if (ifDisplayIsOperatorOrZero())
                 txtDisplay.Text = btnEight.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnEight.Text;
-
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
-            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-            //    txtDisplay.Text = txtDisplay.Text + btnNine.Text;
-            //else
-            //    txtDisplay.Text = btnNine.Text;
-            if (displayIsOperatorOrZero())
+            if (ifDisplayIsOperatorOrZero())
                 txtDisplay.Text = btnNine.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnNine.Text;
-
         }
 
         private void btnZero_Click(object sender, EventArgs e)
         {
-            if (displayIsOperatorOrZero())
+            if (ifDisplayIsOperatorOrZero())
                 txtDisplay.Text = btnZero.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnZero.Text;
-
         }
 
         private void btnDot_Click(object sender, EventArgs e)
         {
-            if (displayIsOperatorOrZero())
+            if (ifDisplayIsOperatorOrZero())
                 txtDisplay.Text = btnDot.Text;
             else
                 txtDisplay.Text = txtDisplay.Text + btnDot.Text;
@@ -252,11 +215,31 @@ namespace Calculator_2022
             txtDisplay.Text = "%";
         }
 
-
+        //***********************************************
+        //   Event for the Sqaure Root button
+        //************************************************
         private void btnSqaureRoot_Click(object sender, EventArgs e)
         {
             txtDisplay.Text = Math.Sqrt(double.Parse(txtDisplay.Text)).ToString();
         }// end of btnRoot_Click event
+
+        //***********************************************
+        //   Event for the Negation button
+        //************************************************
+        private void btnNegate_Click(object sender, EventArgs e)
+        {
+            if (negate)
+            {
+                txtNegate.Text = "";
+                negate = false;
+            }
+            else
+            {
+                txtNegate.Text = "-";
+                negate = true;
+            }
+        }// end of btnNegate_Click event
+
 
         //***********************************************
         //   Event for the Absolute button
@@ -322,7 +305,14 @@ namespace Calculator_2022
         }
 
 
-        // Simple exponential helper - returns base^exponent using System.Math
+        //***********************************************************************************************************************************
+        //         METHODS
+        //***********************************************************************************************************************************
+
+
+        //***********************************************
+        //   Method for returns base^exponent using System.Math
+        //************************************************
         private double power(double baseNumber, double exponent)
         {
             int result = 1;
@@ -339,9 +329,45 @@ namespace Calculator_2022
                 return result;
             }
         }// end of power method
+
+        //***********************************************
+        //   Method:resetNegate()
+        //   clear txtNegate to white space
+        //   reset negate to false
+        //************************************************
+        private void resetNegate()
+        {
+            txtNegate.Text = "";
+            negate = false;
+        }// end of resetNegate method
+
+        //***********************************************
+        //   Method:ifDisplayIsOperatorOrZero()
+        //   if the current display is an operator or zero (return true), the number buttons will replace it
+        //   otherwise (return false) , the number concatenates to the display
+        //   return : bool
+        //************************************************
+        private bool ifDisplayIsOperatorOrZero()
+        {
+            {
+                if (txtDisplay.Text == "+" || txtDisplay.Text == "-" || txtDisplay.Text == "*" || txtDisplay.Text == "/" || txtDisplay.Text == "^" || txtDisplay.Text == "%" || txtDisplay.Text == "0")
+                    return true;
+                else
+                {
+                    return false;
+                }
+            }
+        } // end of ifDisplayIsOperatorOrZero method
+
+        //***********************************************
+        //   Method:getOperandValueAndClearDisplay
+        //   get operatpr value
+        //   clear display for next operand
+        //   reset negate status
+        //************************************************
         private void getOperandValueAndClearDisplay()
         {
-            if (displayIsOperatorOrZero())
+            if (ifDisplayIsOperatorOrZero())
                 return;
 
             if (negate)
@@ -351,7 +377,7 @@ namespace Calculator_2022
 
             txtDisplay.Clear();
             resetNegate();
-        }
+        }// end of getOperandValueAndClearDisplay method
 
         private double getValueFromDisplay()
         {
@@ -361,7 +387,7 @@ namespace Calculator_2022
             else
                 value = double.Parse(txtDisplay.Text);
             return value;
-        }
+        } // end of getValueFromDisplay method
 
         private void resetAllOperationStatusToFalse()
         {
@@ -374,22 +400,9 @@ namespace Calculator_2022
                 absoluteButtonClicked = false;
         } // end of private method resetAllOperationStatusToFalse
 
-        private void resetNegate()
-        {
-            txtNegate.Text = "";
-            negate = false;
-        }// end of resetNegate method
 
-        private bool displayIsOperatorOrZero() {
-            {
-                if (txtDisplay.Text == "+" || txtDisplay.Text == "-" || txtDisplay.Text == "*" || txtDisplay.Text == "/" || txtDisplay.Text == "^" || txtDisplay.Text == "%" || txtDisplay.Text == "0")
-                        return true;
-                else
-                {
-                    return false;
-                }
-            }
-        }
+
+ 
 
         private void updateOperationStatus(char operation)
         {
@@ -423,19 +436,7 @@ namespace Calculator_2022
             }
         }// end of private method updateOperationStatus
 
-        private void btnNegate_Click(object sender, EventArgs e)
-        {
-            if (negate)
-            {
-                txtNegate.Text = "";
-                negate = false;
-            }
-            else
-            {
-                txtNegate.Text = "-";
-                negate = true;
-            }
-        }// end of btnNegate_Click event
+
 
     }
 }
