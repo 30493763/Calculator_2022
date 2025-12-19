@@ -56,18 +56,20 @@ namespace Calculator_2022
             this.btnModulo = new System.Windows.Forms.Button();
             this.btnAbsolute = new System.Windows.Forms.Button();
             this.btnNegate = new System.Windows.Forms.Button();
+            this.txtNegate = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtDisplay
             // 
             this.txtDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDisplay.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDisplay.Font = new System.Drawing.Font("Digital-7 Italic", 60F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDisplay.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtDisplay.Location = new System.Drawing.Point(7, 0);
+            this.txtDisplay.Location = new System.Drawing.Point(100, 0);
             this.txtDisplay.Margin = new System.Windows.Forms.Padding(0);
             this.txtDisplay.Name = "txtDisplay";
-            this.txtDisplay.Size = new System.Drawing.Size(639, 109);
+            this.txtDisplay.Size = new System.Drawing.Size(532, 102);
             this.txtDisplay.TabIndex = 0;
             this.txtDisplay.Text = "0";
             this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -367,6 +369,19 @@ namespace Calculator_2022
             this.btnNegate.Text = "+/-";
             this.btnNegate.UseVisualStyleBackColor = false;
             // 
+            // txtNegate
+            // 
+            this.txtNegate.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtNegate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNegate.Font = new System.Drawing.Font("Digital-7 Italic", 60F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNegate.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtNegate.Location = new System.Drawing.Point(0, 0);
+            this.txtNegate.Margin = new System.Windows.Forms.Padding(0);
+            this.txtNegate.Name = "txtNegate";
+            this.txtNegate.Size = new System.Drawing.Size(100, 102);
+            this.txtNegate.TabIndex = 23;
+            this.txtNegate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -374,6 +389,7 @@ namespace Calculator_2022
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(645, 444);
+            this.Controls.Add(this.txtNegate);
             this.Controls.Add(this.btnNegate);
             this.Controls.Add(this.btnAbsolute);
             this.Controls.Add(this.btnModulo);
@@ -432,6 +448,7 @@ namespace Calculator_2022
         private System.Windows.Forms.Button btnModulo;
         private System.Windows.Forms.Button btnAbsolute;
         private System.Windows.Forms.Button btnNegate;
+        private System.Windows.Forms.TextBox txtNegate;
     }
 }
 
