@@ -133,7 +133,8 @@ namespace Calculator_2022
             txtDisplay.Clear();
             total1 = 0;
             total2=0;
-            updateOperationStatus(default);
+            //updateOperationStatus(default);
+            resetAllOperationStatusToFalse();
             txtDisplay.Text = "0";
         }
 
@@ -280,17 +281,13 @@ namespace Calculator_2022
 
         private void resetAllOperationStatusToFalse()
         {
-            bool[] clickedStatus = new bool[7] { 
-                plusButtonClicked, 
-                minusButtonClicked, 
-                multiplyButtonClicked, 
-                divideButtonClicked, 
-                exponentButtonClicked, 
-                moduloButtonClicked,
-                absoluteButtonClicked
-            };
-            for (int i = 0; i < clickedStatus.Length; i++)
-                clickedStatus[i] = false;
+                plusButtonClicked = false;
+                minusButtonClicked= false; 
+                multiplyButtonClicked= false; 
+                divideButtonClicked= false; 
+                exponentButtonClicked= false; 
+                moduloButtonClicked= false;
+                absoluteButtonClicked = false;
         } // end of private method resetAllOperationStatusToFalse
 
         private bool displayIsOperatorOrZero() {
