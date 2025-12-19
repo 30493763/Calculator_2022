@@ -39,82 +39,127 @@ namespace Calculator_2022
         //**************************************************
         private void btnOne_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-                txtDisplay.Text = txtDisplay.Text + btnOne.Text;
-            else
+            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
+            //    txtDisplay.Text = txtDisplay.Text + btnOne.Text;
+            //else
+            //    txtDisplay.Text = btnOne.Text;
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnOne.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnOne.Text;
+
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-                txtDisplay.Text = txtDisplay.Text + btnTwo.Text;
-            else
+            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
+            //    txtDisplay.Text = txtDisplay.Text + btnTwo.Text;
+            //else
+            //    txtDisplay.Text = btnTwo.Text;
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnTwo.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnTwo.Text;
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-                txtDisplay.Text = txtDisplay.Text + btnThree.Text;
-            else
+            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
+            //    txtDisplay.Text = txtDisplay.Text + btnThree.Text;
+            //else
+            //    txtDisplay.Text = btnThree.Text;
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnThree.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnThree.Text;
+
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-                txtDisplay.Text = txtDisplay.Text + btnFour.Text;
-            else
+            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
+            //    txtDisplay.Text = txtDisplay.Text + btnFour.Text;
+            //else
+            //    txtDisplay.Text = btnFour.Text;
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnFour.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnFour.Text;
+
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-                txtDisplay.Text = txtDisplay.Text + btnFive.Text;
-            else
+            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
+            //    txtDisplay.Text = txtDisplay.Text + btnFive.Text;
+            //else
+            //    txtDisplay.Text = btnFive.Text;
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnFive.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnFive.Text;
+
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-                txtDisplay.Text = txtDisplay.Text + btnSix.Text;
-            else
+            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
+            //    txtDisplay.Text = txtDisplay.Text + btnSix.Text;
+            //else
+            //    txtDisplay.Text = btnSix.Text;
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnSix.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnSix.Text;
+
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-                txtDisplay.Text = txtDisplay.Text + btnSeven.Text;
-            else
+            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
+            //    txtDisplay.Text = txtDisplay.Text + btnSeven.Text;
+            //else
+            //    txtDisplay.Text = btnSeven.Text;
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnSeven.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnSeven.Text;
+
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-                txtDisplay.Text = txtDisplay.Text + btnEight.Text;
-            else
+            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
+            //    txtDisplay.Text = txtDisplay.Text + btnEight.Text;
+            //else
+            //    txtDisplay.Text = btnEight.Text;
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnEight.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnEight.Text;
+
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-                txtDisplay.Text = txtDisplay.Text + btnNine.Text;
-            else
+            //if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
+            //    txtDisplay.Text = txtDisplay.Text + btnNine.Text;
+            //else
+            //    txtDisplay.Text = btnNine.Text;
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnNine.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnNine.Text;
+
         }
 
         private void btnZero_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.Text == "-" || !displayIsOperatorOrZero())
-                txtDisplay.Text = txtDisplay.Text + btnZero.Text;
-            else
+            if (displayIsOperatorOrZero())
                 txtDisplay.Text = btnZero.Text;
+            else
+                txtDisplay.Text = txtDisplay.Text + btnZero.Text;
+
         }
 
         private void btnDot_Click(object sender, EventArgs e)
@@ -133,7 +178,6 @@ namespace Calculator_2022
             txtDisplay.Clear();
             total1 = 0;
             total2=0;
-            //updateOperationStatus(default);
             resetAllOperationStatusToFalse();
             txtDisplay.Text = "0";
         }
@@ -275,6 +319,8 @@ namespace Calculator_2022
         }// end of power method
         private void getOperandValueAndClearDisplay()
         {
+            if (displayIsOperatorOrZero())
+                return;
             total1 = total1 + double.Parse(txtDisplay.Text);
             txtDisplay.Clear();
         }
@@ -292,8 +338,7 @@ namespace Calculator_2022
 
         private bool displayIsOperatorOrZero() {
             {
-                //if (txtDisplay.Text == "+" || txtDisplay.Text == "-" || txtDisplay.Text == "*" || txtDisplay.Text == "/" || txtDisplay.Text == "^" || txtDisplay.Text == "%" || txtDisplay.Text == "0")
-                    if (txtDisplay.Text == "+" || txtDisplay.Text == "*"|| txtDisplay.Text == "/" || txtDisplay.Text == "^" || txtDisplay.Text == "%" || txtDisplay.Text == "0")
+                if (txtDisplay.Text == "+" || txtDisplay.Text == "-" || txtDisplay.Text == "*" || txtDisplay.Text == "/" || txtDisplay.Text == "^" || txtDisplay.Text == "%" || txtDisplay.Text == "0")
                         return true;
                 else
                 {
