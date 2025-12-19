@@ -275,37 +275,31 @@ namespace Calculator_2022
         {
             if (plusButtonClicked)
             {
-                //total2 = total1 + double.Parse(txtDisplay.Text);
                 total2 = total1 + getValueFromDisplay();
 
             }
             else if (minusButtonClicked)
             {
-                //total2 = total1 - double.Parse(txtDisplay.Text);
                 total2 = total1 - getValueFromDisplay();
 
             }
             else if (multiplyButtonClicked)
             {
-                //total2 = total1 * double.Parse(txtDisplay.Text);
                 total2 = total1 * getValueFromDisplay();
 
             }
             else if (divideButtonClicked)
             {
-                //total2 = total1/double.Parse(txtDisplay.Text);
                 total2 = total1 / getValueFromDisplay();
 
             }
             else if (exponentButtonClicked)
             {
-                //total2 = power(total1, double.Parse(txtDisplay.Text));
                 total2 = power(total1, getValueFromDisplay() );
 
             }
             else if (moduloButtonClicked)
             {
-                //total2 = total1 % double.Parse(txtDisplay.Text);
                 total2 = total1 % getValueFromDisplay();
             }
 
