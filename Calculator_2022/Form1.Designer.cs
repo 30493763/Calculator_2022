@@ -277,7 +277,7 @@ namespace Calculator_2022
             this.btnMinus.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnMinus.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinus.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMinus.Location = new System.Drawing.Point(513, 174);
+            this.btnMinus.Location = new System.Drawing.Point(513, 173);
             this.btnMinus.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(107, 49);
@@ -291,7 +291,7 @@ namespace Calculator_2022
             this.btnMultiply.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnMultiply.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMultiply.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMultiply.Location = new System.Drawing.Point(513, 230);
+            this.btnMultiply.Location = new System.Drawing.Point(513, 229);
             this.btnMultiply.Margin = new System.Windows.Forms.Padding(4);
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(107, 49);
@@ -305,7 +305,7 @@ namespace Calculator_2022
             this.btnDivision.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnDivision.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDivision.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDivision.Location = new System.Drawing.Point(513, 287);
+            this.btnDivision.Location = new System.Drawing.Point(513, 286);
             this.btnDivision.Margin = new System.Windows.Forms.Padding(4);
             this.btnDivision.Name = "btnDivision";
             this.btnDivision.Size = new System.Drawing.Size(107, 49);
@@ -319,7 +319,7 @@ namespace Calculator_2022
             this.btnExponen.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnExponen.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExponen.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnExponen.Location = new System.Drawing.Point(396, 117);
+            this.btnExponen.Location = new System.Drawing.Point(398, 117);
             this.btnExponen.Margin = new System.Windows.Forms.Padding(4);
             this.btnExponen.Name = "btnExponen";
             this.btnExponen.Size = new System.Drawing.Size(107, 49);
@@ -333,7 +333,7 @@ namespace Calculator_2022
             this.btnSqaureRoot.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnSqaureRoot.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSqaureRoot.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSqaureRoot.Location = new System.Drawing.Point(399, 174);
+            this.btnSqaureRoot.Location = new System.Drawing.Point(399, 173);
             this.btnSqaureRoot.Margin = new System.Windows.Forms.Padding(4);
             this.btnSqaureRoot.Name = "btnSqaureRoot";
             this.btnSqaureRoot.Size = new System.Drawing.Size(107, 49);
@@ -347,7 +347,7 @@ namespace Calculator_2022
             this.btnModulo.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnModulo.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModulo.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnModulo.Location = new System.Drawing.Point(399, 230);
+            this.btnModulo.Location = new System.Drawing.Point(399, 229);
             this.btnModulo.Margin = new System.Windows.Forms.Padding(4);
             this.btnModulo.Name = "btnModulo";
             this.btnModulo.Size = new System.Drawing.Size(107, 49);
@@ -361,7 +361,7 @@ namespace Calculator_2022
             this.btnAbsolute.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnAbsolute.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbsolute.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAbsolute.Location = new System.Drawing.Point(399, 288);
+            this.btnAbsolute.Location = new System.Drawing.Point(399, 287);
             this.btnAbsolute.Margin = new System.Windows.Forms.Padding(4);
             this.btnAbsolute.Name = "btnAbsolute";
             this.btnAbsolute.Size = new System.Drawing.Size(107, 49);
