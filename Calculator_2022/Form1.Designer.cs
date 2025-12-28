@@ -339,7 +339,7 @@ namespace Calculator_2022
             this.btnSqaureRoot.TabIndex = 19;
             this.btnSqaureRoot.Text = "√";
             this.btnSqaureRoot.UseVisualStyleBackColor = false;
-            this.btnSqaureRoot.Click += new System.EventHandler(this.NumberButton_Click);
+            this.btnSqaureRoot.Click += new System.EventHandler(this.SquareRootButton_Click);
             // 
             // btnModulo
             // 
@@ -367,7 +367,7 @@ namespace Calculator_2022
             this.btnAbsolute.TabIndex = 21;
             this.btnAbsolute.Text = "ABS";
             this.btnAbsolute.UseVisualStyleBackColor = false;
-            this.btnAbsolute.Click += new System.EventHandler(this.NumberButton_Click);
+            this.btnAbsolute.Click += new System.EventHandler(this.AbsoluteButton_Click);
             // 
             // btnNegate
             // 

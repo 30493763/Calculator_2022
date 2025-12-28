@@ -75,29 +75,18 @@ namespace Calculator_2022
             {
                 txtDisplay.Text += buttonText; // concatenate to display
             }
-            //else if (buttonText == "+/-") //  if buttonText is negate
+            //else if (buttonText == "√") // if buttonText is square root operator
             //{
-            //    // Negate button clicked
-            //    if (!negate)
-            //    {
-            //        txtNegate.Text = "-";
-            //        negate = true;
-            //    }
-            //    else
-            //        resetNegate();
+            //    txtDisplay.Text = returnTotalWithLimitedLengthOfString(Math.Sqrt(double.Parse(txtDisplay.Text)).ToString());
             //}
-            else if (buttonText == "√") // if buttonText is square root operator
-            {
-                txtDisplay.Text = returnTotalWithLimitedLengthOfString(Math.Sqrt(double.Parse(txtDisplay.Text)).ToString());
-            }
-            else if (buttonText == "ABS"){
+            //else if (buttonText == "ABS"){
 
-                if(getValueFromDisplay() < 0)
-                {
-                    txtDisplay.Text = (getValueFromDisplay() * -1).ToString();
-                    resetNegate();
-                }
-            }
+            //    if(getValueFromDisplay() < 0)
+            //    {
+            //        txtDisplay.Text = (getValueFromDisplay() * -1).ToString();
+            //        resetNegate();
+            //    }
+            //}
             else if (buttonText == "=") // if buttonText is equal sign
             {
                 if (plusButtonClicked)
@@ -182,6 +171,20 @@ namespace Calculator_2022
             getOperandValueAndClearDisplay();
             updateOperationStatus(char.Parse(buttonText));
             txtDisplay.Text = buttonText;
+        }
+
+        private void SquareRootButton_Click(object sender, EventArgs e)
+        {
+            txtDisplay.Text = returnTotalWithLimitedLengthOfString(Math.Sqrt(double.Parse(txtDisplay.Text)).ToString());
+        }
+
+        private void AbsoluteButton_Click(object sender, EventArgs e)
+        {
+            if (getValueFromDisplay() < 0)
+            {
+                txtDisplay.Text = (getValueFromDisplay() * -1).ToString();
+                resetNegate();
+            }
         }
 
         //***********************************************************************************************************************************
