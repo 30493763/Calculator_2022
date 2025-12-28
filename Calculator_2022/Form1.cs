@@ -11,7 +11,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//hello
+// aurthor: ching ho, li
+// email: 30493763@cityofglacol.ac.uk
+// date of last update: 28 dec 2025
+// time of last update: 2:00 am
+// version: 1.0.0
+// description: A simple calculator application using windows form
+// git hub link: https://github.com/30493763/Calculator_2022.git
+// git branch: main
+
+
 namespace Calculator_2022
 {
     public partial class Form1 : Form
