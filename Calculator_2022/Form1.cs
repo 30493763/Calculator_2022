@@ -64,24 +64,21 @@ namespace Calculator_2022
 
         private void NumberButton_Click(object sender, EventArgs e)
         {
-            // Cast the sender to a Button so we can access its properties
-            Button clickedButton = (Button)sender;
-
             // Get the text from any buttons
-            string buttonText = clickedButton.Text;
+            string buttonText = returnButtonText(sender);
 
-            if ( int.TryParse(buttonText, out int number) && (number >=0 && number <=9)) // check if buttonText is a number between 0 and 9
+            if ( int.TryParse(buttonText, out int number) && (number >=0 && number <=9)) // if buttonText is a number between 0 and 9
             {
                 if (ifDisplayIsOperatorOrZero())
                     txtDisplay.Text = buttonText;
                 else
                     txtDisplay.Text = txtDisplay.Text + buttonText;
             }
-            else if (buttonText == ".") // check if buttonText is decimal point
+            else if (buttonText == ".") //  if buttonText is decimal point
             {
                 txtDisplay.Text += buttonText; // concatenate to display
             }
-            else if (buttonText == "AC") // check if buttonText is AC (all clear)
+            else if (buttonText == "AC") //  if buttonText is AC (all clear)
             {
                 txtDisplay.Text = "0";
                 total1 = 0;
@@ -89,7 +86,7 @@ namespace Calculator_2022
                 resetAllOperationStatusToFalse();
                 resetNegate();
             }
-            else if (buttonText == "+/-") // check if buttonText is negate
+            else if (buttonText == "+/-") //  if buttonText is negate
             {
                 // Negate button clicked
                 if (!negate)
@@ -102,12 +99,26 @@ namespace Calculator_2022
                     resetNegate();
                 }
             }
-            else if (buttonText == "+" || buttonText == "-" || buttonText == "×" || buttonText == "/" )
+            else if (buttonText == "+" || buttonText == "-" || buttonText == "×" || buttonText == "/") // if buttonText is a basic operator
             {
                 getOperandValueAndClearDisplay();
                 resetNegate();
                 updateOperationStatus(char.Parse(buttonText));
                 txtDisplay.Text = buttonText;
+            }
+            else if (buttonText == "^" || buttonText == "%" ) // if buttonText is a Exponent or modulu operator
+            {
+                getOperandValueAndClearDisplay();
+                updateOperationStatus(char.Parse(buttonText));
+                txtDisplay.Text = buttonText;
+            }
+            else if (buttonText == "√") // if buttonText is square root operator
+            {
+                txtDisplay.Text = Math.Sqrt(double.Parse(txtDisplay.Text)).ToString();
+            }
+            else if (buttonText == "ABS"){
+                txtDisplay.Text = (getValueFromDisplay() * -1).ToString();
+                resetNegate();
             }
 
         }
