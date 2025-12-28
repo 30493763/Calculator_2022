@@ -133,35 +133,17 @@ namespace Calculator_2022
         private void EqualsButton_Click(object sender, EventArgs e) // for equals button
         {
             if (plusButtonClicked)
-            {
                 total2 = total1 + getValueFromDisplay();
-
-            }
             else if (minusButtonClicked)
-            {
                 total2 = total1 - getValueFromDisplay();
-
-            }
             else if (multiplyButtonClicked)
-            {
                 total2 = total1 * getValueFromDisplay();
-
-            }
             else if (divideButtonClicked)
-            {
                 total2 = total1 / getValueFromDisplay();
-
-            }
             else if (exponentButtonClicked)
-            {
                 total2 = power(total1, getValueFromDisplay());
-
-            }
             else if (moduloButtonClicked)
-            {
                 total2 = total1 % getValueFromDisplay();
-            }
-
 
             if (total2 >= 0)
             {
@@ -174,7 +156,6 @@ namespace Calculator_2022
                 txtNegate.Text = "-";
                 negate = true;
             }
-
             total1 = 0;//start from the beginning
         }// end of EqualsButton_Click event
 
