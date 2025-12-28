@@ -409,6 +409,7 @@ namespace Calculator_2022
             this.btnDel.TabIndex = 24;
             this.btnDel.Text = "DEL";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.BackspaceButton_Click);
             // 
             // Form1
             // 

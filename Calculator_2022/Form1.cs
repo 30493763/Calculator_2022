@@ -14,11 +14,11 @@ using System.Windows.Forms;
 // aurthor: ching ho, li
 // email: 30493763@cityofglacol.ac.uk
 // date of last update: 28 dec 2025
-// time of last update: 7:30 pm
-// version: 1.2.0
+// time of last update: 7:39 pm
+// version: 1.2.1
 // description: A simple calculator application using windows form
 // git hub link: https://github.com/30493763/Calculator_2022.git
-// git branch: main
+// git branch: back-space-button
 
 namespace Calculator_2022
 {
@@ -127,6 +127,14 @@ namespace Calculator_2022
                 resetNegate();
             }
         }//end of AbsoluteButton_Click event
+
+        private void BackspaceButton_Click(object sender, EventArgs e) // for backspace button
+        {
+            if (txtDisplay.Text.Length > 1)
+                txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.Text.Length - 1);
+            else
+                txtDisplay.Text = "0";
+        }//end of BackspaceButton_Click event
 
         private void EqualsButton_Click(object sender, EventArgs e) // for equals button
         {
