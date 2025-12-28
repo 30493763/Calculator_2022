@@ -14,11 +14,11 @@ using System.Windows.Forms;
 // aurthor: ching ho, li
 // email: 30493763@cityofglacol.ac.uk
 // date of last update: 28 dec 2025
-// time of last update: 4:57 am
-// version: 1.1.2
+// time of last update: 6:57 pm
+// version: 1.2.0
 // description: A simple calculator application using windows form
 // git hub link: https://github.com/30493763/Calculator_2022.git
-// git branch: master
+// git branch: new-click-events
 
 namespace Calculator_2022
 {
