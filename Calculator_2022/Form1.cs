@@ -71,8 +71,9 @@ namespace Calculator_2022
             string buttonText = clickedButton.Text;
 
             // Example: Show the number or append it to a TextBox
-            //txtDisplay.Text += buttonText;
-            if ( int.TryParse(buttonText, out int number) && (number >=0 && number <=9) )
+            
+
+            if ( int.TryParse(buttonText, out int number) && (number >=0 && number <=9)) // check if buttonText is a number between 0 and 9
             {
                 // thats a number button clicked
                 if (ifDisplayIsOperatorOrZero())
@@ -84,9 +85,30 @@ namespace Calculator_2022
                     txtDisplay.Text += buttonText; // concatenate to display
                 }
             }
-            else if (buttonText == ".")
+            else if (buttonText == ".") // check if buttonText is decimal point
             {
                 txtDisplay.Text += buttonText; // concatenate to display
+            }
+            else if (buttonText == "AC") // check if buttonText is AC (all clear)
+            {
+                txtDisplay.Text = "0";
+                total1 = 0;
+                total2 = 0;
+                resetAllOperationStatusToFalse();
+                resetNegate();
+            }
+            else if (buttonText == "+/-") // check if buttonText is negate
+            {
+                // Negate button clicked
+                if (!negate)
+                {
+                    txtNegate.Text = "-";
+                    negate = true;
+                }
+                else
+                {
+                    resetNegate();
+                }
             }
 
         }
