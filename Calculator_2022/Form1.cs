@@ -56,86 +56,94 @@ namespace Calculator_2022
                 txtDisplay.Text = txtDisplay.Text + buttonText;
         }
 
-        
-
         private void btnTwo_Click(object sender, EventArgs e)
         {
+            string buttonText = returnButtonText(sender);
             if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = btnTwo.Text;
+                txtDisplay.Text = buttonText;
             else
-                txtDisplay.Text = txtDisplay.Text + btnTwo.Text;
+                txtDisplay.Text = txtDisplay.Text + buttonText;
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
+            string buttonText = returnButtonText(sender);
             if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = btnThree.Text;
+                txtDisplay.Text = buttonText;
             else
-                txtDisplay.Text = txtDisplay.Text + btnThree.Text;
+                txtDisplay.Text = txtDisplay.Text + buttonText;
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
+            string buttonText = returnButtonText(sender);
             if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = btnFour.Text;
+                txtDisplay.Text = buttonText;
             else
-                txtDisplay.Text = txtDisplay.Text + btnFour.Text;
+                txtDisplay.Text = txtDisplay.Text + buttonText;
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
+            string buttonText = returnButtonText(sender);
             if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = btnFive.Text;
+                txtDisplay.Text = buttonText;
             else
-                txtDisplay.Text = txtDisplay.Text + btnFive.Text;
+                txtDisplay.Text = txtDisplay.Text + buttonText;
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
+            string buttonText = returnButtonText(sender);
             if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = btnSix.Text;
+                txtDisplay.Text = buttonText;
             else
-                txtDisplay.Text = txtDisplay.Text + btnSix.Text;
+                txtDisplay.Text = txtDisplay.Text + buttonText;
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
+            string buttonText = returnButtonText(sender);
             if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = btnSeven.Text;
+                txtDisplay.Text = buttonText;
             else
-                txtDisplay.Text = txtDisplay.Text + btnSeven.Text;
+                txtDisplay.Text = txtDisplay.Text + buttonText;
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
+            string buttonText = returnButtonText(sender);
             if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = btnEight.Text;
+                txtDisplay.Text = buttonText;
             else
-                txtDisplay.Text = txtDisplay.Text + btnEight.Text;
+                txtDisplay.Text = txtDisplay.Text + buttonText;
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
+            string buttonText = returnButtonText(sender);
             if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = btnNine.Text;
+                txtDisplay.Text = buttonText;
             else
-                txtDisplay.Text = txtDisplay.Text + btnNine.Text;
+                txtDisplay.Text = txtDisplay.Text + buttonText;
         }
 
         private void btnZero_Click(object sender, EventArgs e)
         {
+            string buttonText = returnButtonText(sender);
             if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = btnZero.Text;
+                txtDisplay.Text = buttonText;
             else
-                txtDisplay.Text = txtDisplay.Text + btnZero.Text;
+                txtDisplay.Text = txtDisplay.Text + buttonText;
         }
 
         private void btnDot_Click(object sender, EventArgs e)
         {
+            string buttonText = returnButtonText(sender);
             if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = btnDot.Text;
+                txtDisplay.Text = buttonText;
             else
-                txtDisplay.Text = txtDisplay.Text + btnDot.Text;
+                txtDisplay.Text = txtDisplay.Text + buttonText;
         }
 
         //******************************************************
