@@ -14,7 +14,7 @@ using System.Windows.Forms;
 // aurthor: ching ho, li
 // email: 30493763@cityofglacol.ac.uk
 // date of last update: 28 dec 2025
-// time of last update: 6:57 pm
+// time of last update: 7:30 pm
 // version: 1.2.0
 // description: A simple calculator application using windows form
 // git hub link: https://github.com/30493763/Calculator_2022.git
@@ -28,11 +28,12 @@ namespace Calculator_2022
         //        GLOBAL VARIABLES
         //***********************************************************************************************************************************
 
-        const int MAX_LENGTH_OF_STRING = 9;
-        
+        const int MAX_LENGTH_OF_STRING = 9; // maximum length of string in display
+
         double total1 = 0; // first operand
         double total2 = 0; // second operand / result
 
+        //flags for operation buttons
         bool plusButtonClicked = false;
         bool minusButtonClicked = false;
         bool divideButtonClicked = false;
@@ -53,86 +54,32 @@ namespace Calculator_2022
         //         CLICK EVENTS for all number buttons and operators
         //***********************************************************************************************************************************
 
-        private void NumberButton_Click(object sender, EventArgs e)
+        private void NumberButton_Click(object sender, EventArgs e) // for number buttons 0-9
         {
-            string buttonText = returnButtonText(sender); // Get the text value from any buttons
+            string buttonText = returnButtonText(sender); // Get the text value from buttons
 
-            if ( int.TryParse(buttonText, out int number) && (number >=0 && number <=9)) // if buttonText is a number between 0 and 9
+            if (ifDisplayIsOperatorOrZero())
+                txtDisplay.Text = buttonText;
+            else
             {
-                if (ifDisplayIsOperatorOrZero())
-                    txtDisplay.Text = buttonText;
-                else
+                if (txtDisplay.Text.Length > MAX_LENGTH_OF_STRING) // limit the length of string in display
                 {
-                    if (txtDisplay.Text.Length > MAX_LENGTH_OF_STRING) // limit the length of string in display
-                    {
-                        MessageBox.Show("Maximum number of digits reached!");
-                        return;
-                    }
-                    txtDisplay.Text = txtDisplay.Text + buttonText;
+                    MessageBox.Show("Maximum number of digits reached!");
+                    return;
                 }
+                txtDisplay.Text = txtDisplay.Text + buttonText;
             }
-            //else if (buttonText == ".") //  if buttonText is decimal point
-            //{
-            //    txtDisplay.Text += buttonText; // concatenate to display
-            //}
-            //else if (buttonText == "=") // if buttonText is equal sign
-            //{
-            //    if (plusButtonClicked)
-            //    {
-            //        total2 = total1 + getValueFromDisplay();
-
-            //    }
-            //    else if (minusButtonClicked)
-            //    {
-            //        total2 = total1 - getValueFromDisplay();
-
-            //    }
-            //    else if (multiplyButtonClicked)
-            //    {
-            //        total2 = total1 * getValueFromDisplay();
-
-            //    }
-            //    else if (divideButtonClicked)
-            //    {
-            //        total2 = total1 / getValueFromDisplay();
-
-            //    }
-            //    else if (exponentButtonClicked)
-            //    {
-            //        total2 = power(total1, getValueFromDisplay());
-
-            //    }
-            //    else if (moduloButtonClicked)
-            //    {
-            //        total2 = total1 % getValueFromDisplay();
-            //    }
-
-
-            //    if (total2 >= 0)
-            //    {
-            //        txtDisplay.Text = returnTotalWithLimitedLengthOfString(total2.ToString()); //display the total value
-            //        resetNegate();
-            //    }
-            //    else {
-            //        txtDisplay.Text = returnTotalWithLimitedLengthOfString((total2 * -1).ToString() ); //display the total value
-            //        txtNegate.Text = "-";
-            //        negate = true;
-            //    }
-
-            //    total1 = 0;//start from the beginning
-            //}
-
         } // end of NumberButton_Click event
 
-        private void DecimalButton_Click(object sender, EventArgs e)
+        private void DecimalButton_Click(object sender, EventArgs e) // for decimal point button
         {
             if (!txtDisplay.Text.Contains("."))
             {
                 txtDisplay.Text = txtDisplay.Text + ".";
             }
-        }
-       
-        private void NegateButton_Click(object sender, EventArgs e)
+        }//end of DecimalButton_Click event
+
+        private void NegateButton_Click(object sender, EventArgs e) // for negate button
         {
             if (!negate)
             {
@@ -141,49 +88,49 @@ namespace Calculator_2022
             }
             else
                 resetNegate();
-        }
+        }//end of NegateButton_Click event
 
-        private void ClsButton_Click(object sender, EventArgs e)
+        private void ClsButton_Click(object sender, EventArgs e) // for clear button
         {
             txtDisplay.Text = "0";
             total1 = 0;
             total2 = 0;
             resetAllOperationStatusToFalse();
             resetNegate();
-        }
+        }//end of ClsButton_Click event
 
-        private void BasicOperator_Click(object sender, EventArgs e)
+        private void BasicOperator_Click(object sender, EventArgs e) // for basic operator buttons + - × /
         {
-            string buttonText = returnButtonText(sender); // Get the text vakye from any buttons
+            string buttonText = returnButtonText(sender); // Get the text value from buttons
             getOperandValueAndClearDisplay();
             resetNegate();
             updateOperationStatus(char.Parse(buttonText));
             txtDisplay.Text = buttonText;
-        }
+        }//end of BasicOperator_Click event
 
         private void ExponentModuluButton_Click(object sender, EventArgs e)
         {
-            string buttonText = returnButtonText(sender); // Get the text vakye from any buttons
+            string buttonText = returnButtonText(sender); // Get the text value from buttons
             getOperandValueAndClearDisplay();
             updateOperationStatus(char.Parse(buttonText));
             txtDisplay.Text = buttonText;
-        }
+        }// end of ExponentModuluButton_Click event
 
-        private void SquareRootButton_Click(object sender, EventArgs e)
+        private void SquareRootButton_Click(object sender, EventArgs e) // for square root button
         {
             txtDisplay.Text = returnTotalWithLimitedLengthOfString(Math.Sqrt(double.Parse(txtDisplay.Text)).ToString());
-        }
+        }//end of SquareRootButton_Click event
 
-        private void AbsoluteButton_Click(object sender, EventArgs e)
+        private void AbsoluteButton_Click(object sender, EventArgs e) // for absolute value button
         {
             if (getValueFromDisplay() < 0)
             {
                 txtDisplay.Text = (getValueFromDisplay() * -1).ToString();
                 resetNegate();
             }
-        }
+        }//end of AbsoluteButton_Click event
 
-        private void EqualsButton_Click(object sender, EventArgs e)
+        private void EqualsButton_Click(object sender, EventArgs e) // for equals button
         {
             if (plusButtonClicked)
             {
@@ -218,18 +165,18 @@ namespace Calculator_2022
 
             if (total2 >= 0)
             {
-                txtDisplay.Text = returnTotalWithLimitedLengthOfString(total2.ToString()); //display the total value
+                txtDisplay.Text = returnTotalWithLimitedLengthOfString(total2.ToString()); //display the total value, limit length of string
                 resetNegate();
             }
             else
             {
-                txtDisplay.Text = returnTotalWithLimitedLengthOfString((total2 * -1).ToString()); //display the total value
+                txtDisplay.Text = returnTotalWithLimitedLengthOfString((total2 * -1).ToString()); //display the total value, limit length of string
                 txtNegate.Text = "-";
                 negate = true;
             }
 
             total1 = 0;//start from the beginning
-        }
+        }// end of EqualsButton_Click event
 
         //***********************************************************************************************************************************
         //         METHODS
