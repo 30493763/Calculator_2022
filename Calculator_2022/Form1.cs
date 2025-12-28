@@ -18,7 +18,8 @@ using System.Windows.Forms;
 // version: 1.0.0
 // description: A simple calculator application using windows form
 // git hub link: https://github.com/30493763/Calculator_2022.git
-// git branch: main
+// git branch: rewrite
+
 
 
 namespace Calculator_2022
@@ -56,278 +57,22 @@ namespace Calculator_2022
         //**************************************************
         //       Events for each number button
         //**************************************************
-        private void btnOne_Click(object sender, EventArgs e)
-        {
-            string buttonText = returnButtonText(sender);
-            if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = buttonText;
-            else
-                txtDisplay.Text = txtDisplay.Text + buttonText;
-        }
-
-        private void btnTwo_Click(object sender, EventArgs e)
-        {
-            string buttonText = returnButtonText(sender);
-            if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = buttonText;
-            else
-                txtDisplay.Text = txtDisplay.Text + buttonText;
-        }
-
-        private void btnThree_Click(object sender, EventArgs e)
-        {
-            string buttonText = returnButtonText(sender);
-            if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = buttonText;
-            else
-                txtDisplay.Text = txtDisplay.Text + buttonText;
-        }
-
-        private void btnFour_Click(object sender, EventArgs e)
-        {
-            string buttonText = returnButtonText(sender);
-            if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = buttonText;
-            else
-                txtDisplay.Text = txtDisplay.Text + buttonText;
-        }
-
-        private void btnFive_Click(object sender, EventArgs e)
-        {
-            string buttonText = returnButtonText(sender);
-            if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = buttonText;
-            else
-                txtDisplay.Text = txtDisplay.Text + buttonText;
-        }
-
-        private void btnSix_Click(object sender, EventArgs e)
-        {
-            string buttonText = returnButtonText(sender);
-            if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = buttonText;
-            else
-                txtDisplay.Text = txtDisplay.Text + buttonText;
-        }
-
-        private void btnSeven_Click(object sender, EventArgs e)
-        {
-            string buttonText = returnButtonText(sender);
-            if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = buttonText;
-            else
-                txtDisplay.Text = txtDisplay.Text + buttonText;
-        }
-
-        private void btnEight_Click(object sender, EventArgs e)
-        {
-            string buttonText = returnButtonText(sender);
-            if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = buttonText;
-            else
-                txtDisplay.Text = txtDisplay.Text + buttonText;
-        }
-
-        private void btnNine_Click(object sender, EventArgs e)
-        {
-            string buttonText = returnButtonText(sender);
-            if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = buttonText;
-            else
-                txtDisplay.Text = txtDisplay.Text + buttonText;
-        }
-
-        private void btnZero_Click(object sender, EventArgs e)
-        {
-            string buttonText = returnButtonText(sender);
-            if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = buttonText;
-            else
-                txtDisplay.Text = txtDisplay.Text + buttonText;
-        }
-
-        private void btnDot_Click(object sender, EventArgs e)
-        {
-            string buttonText = returnButtonText(sender);
-            if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = buttonText;
-            else
-                txtDisplay.Text = txtDisplay.Text + buttonText;
-        }
-
-        //******************************************************
-        //     Event for Clear button- clears the display and all previous operations
-        //**********************************************************
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            txtDisplay.Clear();
-            total1 = 0;
-            total2=0;
-            resetAllOperationStatusToFalse();
-            resetNegate();  
-            txtDisplay.Text = "0";
-        }
-
-        //***********************************************
-        //   Event for the Plus button
-        //************************************************
-        private void btnPlus_Click(object sender, EventArgs e)
-        {
-            getOperandValueAndClearDisplay();
-            resetNegate();
-            updateOperationStatus('+');
-            txtDisplay.Text = "+";
-        }
-
-        //***********************************************
-        //   Event for the Minus button   
-        //************************************************
-        private void btnMinus_Click(object sender, EventArgs e)
-        {
-            getOperandValueAndClearDisplay();
-            resetNegate();
-            updateOperationStatus('-');
-            txtDisplay.Text = "-";
-
-        }
-
-        //***********************************************
-        //   Event for the Multiply button
-        //************************************************
-        private void btnMultiply_Click(object sender, EventArgs e)
-        {
-            getOperandValueAndClearDisplay();
-            resetNegate();
-            updateOperationStatus('*');
-            txtDisplay.Text = "*";
-        }
-
-        //***********************************************
-        //   Event for the Divide button
-        //************************************************
-        private void btnDivision_Click(object sender, EventArgs e)
-        {
-            getOperandValueAndClearDisplay();
-            resetNegate();
-            updateOperationStatus('/');
-            txtDisplay.Text = "/";
-        }
-
-
-        //***********************************************
-        //   Event for the Exponent button
-        //************************************************
-        private void btnExponen_Click(object sender, EventArgs e)
-        {
-            getOperandValueAndClearDisplay();
-            updateOperationStatus('^');
-            txtDisplay.Text = "^";
-
-        }// end of btnExponen_Click event
-
-        //***********************************************
-        //   Event for the Modulo button
-        //************************************************
-        private void btnModulo_Click(object sender, EventArgs e)
-        {
-            getOperandValueAndClearDisplay();
-            updateOperationStatus('%');
-            txtDisplay.Text = "%";
-        }
-
-        //***********************************************
-        //   Event for the Sqaure Root button
-        //************************************************
-        private void btnSqaureRoot_Click(object sender, EventArgs e)
-        {
-            txtDisplay.Text = Math.Sqrt(double.Parse(txtDisplay.Text)).ToString();
-        }// end of btnRoot_Click event
-
-        //***********************************************
-        //   Event for the Negation button
-        //************************************************
-        private void btnNegate_Click(object sender, EventArgs e)
-        {
-            if (negate)
-            {
-                txtNegate.Text = "";
-                negate = false;
-            }
-            else
-            {
-                txtNegate.Text = "-";
-                negate = true;
-            }
-        }// end of btnNegate_Click event
-
-
-        //***********************************************
-        //   Event for the Absolute button
-        //************************************************
-        private void btnAbsolute_Click(object sender, EventArgs e)
-        {
-            txtDisplay.Text = (getValueFromDisplay()*-1).ToString();
-            resetNegate();  
-
-        }// end of btnAbsolute_Click event
-
-        //***********************************************
-        //   Event for the Equal button - calculates the total value
-        //************************************************
-        private void btnEqual_Click(object sender, EventArgs e)
-        {
-            if (plusButtonClicked)
-            {
-                total2 = total1 + getValueFromDisplay();
-
-            }
-            else if (minusButtonClicked)
-            {
-                total2 = total1 - getValueFromDisplay();
-
-            }
-            else if (multiplyButtonClicked)
-            {
-                total2 = total1 * getValueFromDisplay();
-
-            }
-            else if (divideButtonClicked)
-            {
-                total2 = total1 / getValueFromDisplay();
-
-            }
-            else if (exponentButtonClicked)
-            {
-                total2 = power(total1, getValueFromDisplay() );
-
-            }
-            else if (moduloButtonClicked)
-            {
-                total2 = total1 % getValueFromDisplay();
-            }
-
-
-            if (total2 >=0)
-            {
-                txtDisplay.Text = total2.ToString();//display the total value
-                resetNegate();
-            }
-            if (total2 < 0)
-            {
-                txtDisplay.Text = (total2*-1).ToString();//display the total value
-
-                txtNegate.Text = "-";
-                negate = true;
-            }
-
-            total1 = 0;//start from the beginning
-            //resetNegate();
-        }
-
 
         //***********************************************************************************************************************************
         //         METHODS
         //***********************************************************************************************************************************
+
+        private void NumberButton_Click(object sender, EventArgs e)
+        {
+            // Cast the sender to a Button so we can access its properties
+            Button clickedButton = (Button)sender;
+
+            // Get the text (0-9) from the button
+            string buttonText = clickedButton.Text;
+
+            // Example: Show the number or append it to a TextBox
+            txtDisplay.Text += buttonText;
+        }
 
         //***********************************************
         //   Method for returns text of button clicked 

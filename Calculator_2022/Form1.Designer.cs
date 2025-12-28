@@ -85,137 +85,137 @@ namespace Calculator_2022
             this.btnOne.TabIndex = 1;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = false;
-            this.btnOne.Click += new System.EventHandler(this.btnOne_Click);
+            this.btnOne.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnTwo
             // 
             this.btnTwo.BackColor = System.Drawing.SystemColors.Menu;
             this.btnTwo.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTwo.Location = new System.Drawing.Point(143, 116);
-            this.btnTwo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTwo.Margin = new System.Windows.Forms.Padding(4);
             this.btnTwo.Name = "btnTwo";
             this.btnTwo.Size = new System.Drawing.Size(107, 74);
             this.btnTwo.TabIndex = 2;
             this.btnTwo.Text = "2";
             this.btnTwo.UseVisualStyleBackColor = false;
-            this.btnTwo.Click += new System.EventHandler(this.btnTwo_Click);
+            this.btnTwo.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnThree
             // 
             this.btnThree.BackColor = System.Drawing.SystemColors.Menu;
             this.btnThree.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThree.Location = new System.Drawing.Point(257, 117);
-            this.btnThree.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThree.Margin = new System.Windows.Forms.Padding(4);
             this.btnThree.Name = "btnThree";
             this.btnThree.Size = new System.Drawing.Size(107, 74);
             this.btnThree.TabIndex = 3;
             this.btnThree.Text = "3";
             this.btnThree.UseVisualStyleBackColor = false;
-            this.btnThree.Click += new System.EventHandler(this.btnThree_Click);
+            this.btnThree.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnFour
             // 
             this.btnFour.BackColor = System.Drawing.SystemColors.Menu;
             this.btnFour.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFour.Location = new System.Drawing.Point(28, 204);
-            this.btnFour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFour.Margin = new System.Windows.Forms.Padding(4);
             this.btnFour.Name = "btnFour";
             this.btnFour.Size = new System.Drawing.Size(107, 74);
             this.btnFour.TabIndex = 4;
             this.btnFour.Text = "4";
             this.btnFour.UseVisualStyleBackColor = false;
-            this.btnFour.Click += new System.EventHandler(this.btnFour_Click);
+            this.btnFour.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnFive
             // 
             this.btnFive.BackColor = System.Drawing.SystemColors.Menu;
             this.btnFive.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFive.Location = new System.Drawing.Point(143, 204);
-            this.btnFive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFive.Margin = new System.Windows.Forms.Padding(4);
             this.btnFive.Name = "btnFive";
             this.btnFive.Size = new System.Drawing.Size(107, 74);
             this.btnFive.TabIndex = 5;
             this.btnFive.Text = "5";
             this.btnFive.UseVisualStyleBackColor = false;
-            this.btnFive.Click += new System.EventHandler(this.btnFive_Click);
+            this.btnFive.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnSix
             // 
             this.btnSix.BackColor = System.Drawing.SystemColors.Menu;
             this.btnSix.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSix.Location = new System.Drawing.Point(257, 206);
-            this.btnSix.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSix.Margin = new System.Windows.Forms.Padding(4);
             this.btnSix.Name = "btnSix";
             this.btnSix.Size = new System.Drawing.Size(107, 74);
             this.btnSix.TabIndex = 6;
             this.btnSix.Text = "6";
             this.btnSix.UseVisualStyleBackColor = false;
-            this.btnSix.Click += new System.EventHandler(this.btnSix_Click);
+            this.btnSix.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnSeven
             // 
             this.btnSeven.BackColor = System.Drawing.SystemColors.Menu;
             this.btnSeven.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeven.Location = new System.Drawing.Point(28, 287);
-            this.btnSeven.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSeven.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeven.Name = "btnSeven";
             this.btnSeven.Size = new System.Drawing.Size(107, 74);
             this.btnSeven.TabIndex = 7;
             this.btnSeven.Text = "7";
             this.btnSeven.UseVisualStyleBackColor = false;
-            this.btnSeven.Click += new System.EventHandler(this.btnSeven_Click);
+            this.btnSeven.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnEight
             // 
             this.btnEight.BackColor = System.Drawing.SystemColors.Menu;
             this.btnEight.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEight.Location = new System.Drawing.Point(143, 287);
-            this.btnEight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEight.Margin = new System.Windows.Forms.Padding(4);
             this.btnEight.Name = "btnEight";
             this.btnEight.Size = new System.Drawing.Size(107, 74);
             this.btnEight.TabIndex = 8;
             this.btnEight.Text = "8";
             this.btnEight.UseVisualStyleBackColor = false;
-            this.btnEight.Click += new System.EventHandler(this.btnEight_Click);
+            this.btnEight.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnNine
             // 
             this.btnNine.BackColor = System.Drawing.SystemColors.Menu;
             this.btnNine.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNine.Location = new System.Drawing.Point(257, 288);
-            this.btnNine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNine.Margin = new System.Windows.Forms.Padding(4);
             this.btnNine.Name = "btnNine";
             this.btnNine.Size = new System.Drawing.Size(107, 74);
             this.btnNine.TabIndex = 9;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = false;
-            this.btnNine.Click += new System.EventHandler(this.btnNine_Click);
+            this.btnNine.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnZero
             // 
             this.btnZero.BackColor = System.Drawing.SystemColors.Menu;
             this.btnZero.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZero.Location = new System.Drawing.Point(143, 363);
-            this.btnZero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnZero.Margin = new System.Windows.Forms.Padding(4);
             this.btnZero.Name = "btnZero";
             this.btnZero.Size = new System.Drawing.Size(107, 74);
             this.btnZero.TabIndex = 10;
             this.btnZero.Text = "0";
             this.btnZero.UseVisualStyleBackColor = false;
-            this.btnZero.Click += new System.EventHandler(this.btnZero_Click);
+            this.btnZero.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnDot
             // 
             this.btnDot.BackColor = System.Drawing.SystemColors.Menu;
             this.btnDot.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDot.Location = new System.Drawing.Point(257, 364);
-            this.btnDot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDot.Margin = new System.Windows.Forms.Padding(4);
             this.btnDot.Name = "btnDot";
             this.btnDot.Size = new System.Drawing.Size(107, 74);
             this.btnDot.TabIndex = 11;
             this.btnDot.Text = ".";
             this.btnDot.UseVisualStyleBackColor = false;
-            this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
+            this.btnDot.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnPlus
             // 
@@ -223,13 +223,13 @@ namespace Calculator_2022
             this.btnPlus.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlus.ForeColor = System.Drawing.SystemColors.Control;
             this.btnPlus.Location = new System.Drawing.Point(513, 117);
-            this.btnPlus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPlus.Margin = new System.Windows.Forms.Padding(4);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(107, 49);
             this.btnPlus.TabIndex = 12;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = false;
-            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            this.btnPlus.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnEqual
             // 
@@ -237,13 +237,13 @@ namespace Calculator_2022
             this.btnEqual.Font = new System.Drawing.Font("Digital-7 Italic", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEqual.ForeColor = System.Drawing.SystemColors.Control;
             this.btnEqual.Location = new System.Drawing.Point(513, 343);
-            this.btnEqual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEqual.Margin = new System.Windows.Forms.Padding(4);
             this.btnEqual.Name = "btnEqual";
             this.btnEqual.Size = new System.Drawing.Size(107, 95);
             this.btnEqual.TabIndex = 13;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = false;
-            this.btnEqual.Click += new System.EventHandler(this.btnEqual_Click);
+            this.btnEqual.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnClear
             // 
@@ -251,13 +251,13 @@ namespace Calculator_2022
             this.btnClear.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.Control;
             this.btnClear.Location = new System.Drawing.Point(399, 343);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(107, 88);
             this.btnClear.TabIndex = 14;
             this.btnClear.Text = "AC";
             this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnClear.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnMinus
             // 
@@ -265,13 +265,13 @@ namespace Calculator_2022
             this.btnMinus.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinus.ForeColor = System.Drawing.SystemColors.Control;
             this.btnMinus.Location = new System.Drawing.Point(513, 174);
-            this.btnMinus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinus.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(107, 49);
             this.btnMinus.TabIndex = 15;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = false;
-            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
+            this.btnMinus.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnMultiply
             // 
@@ -279,13 +279,13 @@ namespace Calculator_2022
             this.btnMultiply.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMultiply.ForeColor = System.Drawing.SystemColors.Control;
             this.btnMultiply.Location = new System.Drawing.Point(513, 230);
-            this.btnMultiply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMultiply.Margin = new System.Windows.Forms.Padding(4);
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(107, 49);
             this.btnMultiply.TabIndex = 16;
             this.btnMultiply.Text = "×";
             this.btnMultiply.UseVisualStyleBackColor = false;
-            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
+            this.btnMultiply.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnDivision
             // 
@@ -293,13 +293,13 @@ namespace Calculator_2022
             this.btnDivision.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDivision.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDivision.Location = new System.Drawing.Point(513, 287);
-            this.btnDivision.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDivision.Margin = new System.Windows.Forms.Padding(4);
             this.btnDivision.Name = "btnDivision";
             this.btnDivision.Size = new System.Drawing.Size(107, 49);
             this.btnDivision.TabIndex = 17;
             this.btnDivision.Text = "/";
             this.btnDivision.UseVisualStyleBackColor = false;
-            this.btnDivision.Click += new System.EventHandler(this.btnDivision_Click);
+            this.btnDivision.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnExponen
             // 
@@ -307,13 +307,13 @@ namespace Calculator_2022
             this.btnExponen.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExponen.ForeColor = System.Drawing.SystemColors.Control;
             this.btnExponen.Location = new System.Drawing.Point(396, 117);
-            this.btnExponen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExponen.Margin = new System.Windows.Forms.Padding(4);
             this.btnExponen.Name = "btnExponen";
             this.btnExponen.Size = new System.Drawing.Size(107, 49);
             this.btnExponen.TabIndex = 18;
             this.btnExponen.Text = "^";
             this.btnExponen.UseVisualStyleBackColor = false;
-            this.btnExponen.Click += new System.EventHandler(this.btnExponen_Click);
+            this.btnExponen.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnSqaureRoot
             // 
@@ -321,13 +321,13 @@ namespace Calculator_2022
             this.btnSqaureRoot.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSqaureRoot.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSqaureRoot.Location = new System.Drawing.Point(399, 174);
-            this.btnSqaureRoot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSqaureRoot.Margin = new System.Windows.Forms.Padding(4);
             this.btnSqaureRoot.Name = "btnSqaureRoot";
             this.btnSqaureRoot.Size = new System.Drawing.Size(107, 49);
             this.btnSqaureRoot.TabIndex = 19;
             this.btnSqaureRoot.Text = "√";
             this.btnSqaureRoot.UseVisualStyleBackColor = false;
-            this.btnSqaureRoot.Click += new System.EventHandler(this.btnSqaureRoot_Click);
+            this.btnSqaureRoot.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnModulo
             // 
@@ -335,13 +335,13 @@ namespace Calculator_2022
             this.btnModulo.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModulo.ForeColor = System.Drawing.SystemColors.Control;
             this.btnModulo.Location = new System.Drawing.Point(399, 230);
-            this.btnModulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModulo.Margin = new System.Windows.Forms.Padding(4);
             this.btnModulo.Name = "btnModulo";
             this.btnModulo.Size = new System.Drawing.Size(107, 49);
             this.btnModulo.TabIndex = 20;
             this.btnModulo.Text = "%";
             this.btnModulo.UseVisualStyleBackColor = false;
-            this.btnModulo.Click += new System.EventHandler(this.btnModulo_Click);
+            this.btnModulo.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnAbsolute
             // 
@@ -349,13 +349,13 @@ namespace Calculator_2022
             this.btnAbsolute.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbsolute.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAbsolute.Location = new System.Drawing.Point(399, 288);
-            this.btnAbsolute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAbsolute.Margin = new System.Windows.Forms.Padding(4);
             this.btnAbsolute.Name = "btnAbsolute";
             this.btnAbsolute.Size = new System.Drawing.Size(107, 48);
             this.btnAbsolute.TabIndex = 21;
             this.btnAbsolute.Text = "ABS";
             this.btnAbsolute.UseVisualStyleBackColor = false;
-            this.btnAbsolute.Click += new System.EventHandler(this.btnAbsolute_Click);
+            this.btnAbsolute.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // btnNegate
             // 
@@ -368,7 +368,7 @@ namespace Calculator_2022
             this.btnNegate.TabIndex = 22;
             this.btnNegate.Text = "+/-";
             this.btnNegate.UseVisualStyleBackColor = false;
-            this.btnNegate.Click += new System.EventHandler(this.btnNegate_Click);
+            this.btnNegate.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // txtNegate
             // 
@@ -415,7 +415,7 @@ namespace Calculator_2022
             this.Controls.Add(this.btnOne);
             this.Controls.Add(this.txtDisplay);
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Calculator";
             this.ResumeLayout(false);
