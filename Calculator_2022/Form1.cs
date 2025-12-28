@@ -71,7 +71,24 @@ namespace Calculator_2022
             string buttonText = clickedButton.Text;
 
             // Example: Show the number or append it to a TextBox
-            txtDisplay.Text += buttonText;
+            //txtDisplay.Text += buttonText;
+            if ( int.TryParse(buttonText, out int number) && (number >=0 && number <=9) )
+            {
+                // thats a number button clicked
+                if (ifDisplayIsOperatorOrZero())
+                {
+                    txtDisplay.Text = buttonText; // replace display
+                }
+                else
+                {
+                    txtDisplay.Text += buttonText; // concatenate to display
+                }
+            }
+            else if (buttonText == ".")
+            {
+                txtDisplay.Text += buttonText; // concatenate to display
+            }
+
         }
 
         //***********************************************
