@@ -265,9 +265,6 @@ namespace Calculator_2022
                 case '%':
                     moduloButtonClicked = true;
                     break;
-                //case 'A':
-                //    absoluteButtonClicked = true;
-                //    break;
                 default:
                     break;
             }
