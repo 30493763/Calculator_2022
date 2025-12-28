@@ -48,18 +48,8 @@ namespace Calculator_2022
             InitializeComponent();
         }
 
-
         //***********************************************************************************************************************************
-        //         CLICK EVENTS
-        //***********************************************************************************************************************************
-
-
-        //**************************************************
-        //       Events for each number button
-        //**************************************************
-
-        //***********************************************************************************************************************************
-        //         METHODS
+        //         Click event for all number buttons and operators
         //***********************************************************************************************************************************
 
         private void NumberButton_Click(object sender, EventArgs e)
@@ -120,8 +110,58 @@ namespace Calculator_2022
                 txtDisplay.Text = (getValueFromDisplay() * -1).ToString();
                 resetNegate();
             }
+            else if (buttonText == "=") // if buttonText is equal sign
+            {
+                if (plusButtonClicked)
+                {
+                    total2 = total1 + getValueFromDisplay();
 
-        }
+                }
+                else if (minusButtonClicked)
+                {
+                    total2 = total1 - getValueFromDisplay();
+
+                }
+                else if (multiplyButtonClicked)
+                {
+                    total2 = total1 * getValueFromDisplay();
+
+                }
+                else if (divideButtonClicked)
+                {
+                    total2 = total1 / getValueFromDisplay();
+
+                }
+                else if (exponentButtonClicked)
+                {
+                    total2 = power(total1, getValueFromDisplay());
+
+                }
+                else if (moduloButtonClicked)
+                {
+                    total2 = total1 % getValueFromDisplay();
+                }
+
+
+                if (total2 >= 0)
+                {
+                    txtDisplay.Text = total2.ToString();//display the total value
+                    resetNegate();
+                }
+                else { 
+                    txtDisplay.Text = (total2 * -1).ToString();//display the total value
+                    txtNegate.Text = "-";
+                    negate = true;
+                }
+
+                total1 = 0;//start from the beginning
+            }
+
+        } // end of NumberButton_Click event
+
+        //***********************************************************************************************************************************
+        //         METHODS
+        //***********************************************************************************************************************************
 
         //***********************************************
         //   Method for returns text of button clicked 
