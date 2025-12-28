@@ -49,11 +49,14 @@ namespace Calculator_2022
         //**************************************************
         private void btnOne_Click(object sender, EventArgs e)
         {
+            string buttonText = returnButtonText(sender);
             if (ifDisplayIsOperatorOrZero())
-                txtDisplay.Text = btnOne.Text;
+                txtDisplay.Text = buttonText;
             else
-                txtDisplay.Text = txtDisplay.Text + btnOne.Text;
+                txtDisplay.Text = txtDisplay.Text + buttonText;
         }
+
+        
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
@@ -309,6 +312,15 @@ namespace Calculator_2022
         //         METHODS
         //***********************************************************************************************************************************
 
+        //***********************************************
+        //   Method for returns text of button clicked 
+        //************************************************
+        private string returnButtonText(object sender)
+        {
+            //Cast the sender to a Button so we can access its properties
+            Button clickedButton = (Button)sender;
+            return clickedButton.Text;
+        }// end of returnButtonText method
 
         //***********************************************
         //   Method for returns base^exponent using System.Math
@@ -400,10 +412,6 @@ namespace Calculator_2022
                 absoluteButtonClicked = false;
         } // end of private method resetAllOperationStatusToFalse
 
-
-
- 
-
         private void updateOperationStatus(char operation)
         {
             resetAllOperationStatusToFalse();
@@ -435,8 +443,6 @@ namespace Calculator_2022
                     break;
             }
         }// end of private method updateOperationStatus
-
-
 
     }
 }
