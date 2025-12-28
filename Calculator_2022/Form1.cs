@@ -27,6 +27,9 @@ namespace Calculator_2022
         //***********************************************************************************************************************************
         //        GLOBAL VARIABLES
         //***********************************************************************************************************************************
+
+        const int MAX_LENGTH_OF_STRING = 10;
+        
         double total1 = 0; // first operand
         double total2 = 0; // second operand / result
 
@@ -99,7 +102,7 @@ namespace Calculator_2022
             }
             else if (buttonText == "√") // if buttonText is square root operator
             {
-                txtDisplay.Text = Math.Sqrt(double.Parse(txtDisplay.Text)).ToString();
+                txtDisplay.Text = returnTotalWithLimitedLengthOfString(Math.Sqrt(double.Parse(txtDisplay.Text)).ToString());
             }
             else if (buttonText == "ABS"){
                 txtDisplay.Text = (getValueFromDisplay() * -1).ToString();
@@ -140,11 +143,11 @@ namespace Calculator_2022
 
                 if (total2 >= 0)
                 {
-                    txtDisplay.Text = total2.ToString();//display the total value
+                    txtDisplay.Text = returnTotalWithLimitedLengthOfString(total2.ToString()); //display the total value
                     resetNegate();
                 }
-                else { 
-                    txtDisplay.Text = (total2 * -1).ToString();//display the total value
+                else {
+                    txtDisplay.Text = returnTotalWithLimitedLengthOfString((total2 * -1).ToString() ); //display the total value
                     txtNegate.Text = "-";
                     negate = true;
                 }
@@ -219,6 +222,20 @@ namespace Calculator_2022
                 value = double.Parse(txtDisplay.Text);
             return value;
         } // end of getValueFromDisplay method
+
+        private string returnTotalWithLimitedLengthOfString(string total) // return total in less than 10 characters due to display limit of txtDisplay
+        {
+            string totalString;
+            if (total.Length > MAX_LENGTH_OF_STRING)
+            {
+                totalString = total.Substring(0, MAX_LENGTH_OF_STRING);
+            }
+            else
+            {
+                totalString = total;
+            }
+            return totalString;
+        } // end of returnTotalWithLimitedLengthOfString method
 
         private void resetAllOperationStatusToFalse() // reset all operation status to false
         {

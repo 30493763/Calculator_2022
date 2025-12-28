@@ -66,8 +66,9 @@ namespace Calculator_2022
             this.txtDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDisplay.Font = new System.Drawing.Font("Digital-7 Italic", 60F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDisplay.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtDisplay.Location = new System.Drawing.Point(85, 0);
+            this.txtDisplay.Location = new System.Drawing.Point(87, 0);
             this.txtDisplay.Margin = new System.Windows.Forms.Padding(0);
+            this.txtDisplay.MaxLength = 7;
             this.txtDisplay.Name = "txtDisplay";
             this.txtDisplay.Size = new System.Drawing.Size(544, 102);
             this.txtDisplay.TabIndex = 0;
@@ -401,7 +402,7 @@ namespace Calculator_2022
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(630, 442);
+            this.ClientSize = new System.Drawing.Size(632, 453);
             this.Controls.Add(this.txtNegate);
             this.Controls.Add(this.btnNegate);
             this.Controls.Add(this.btnAbsolute);
