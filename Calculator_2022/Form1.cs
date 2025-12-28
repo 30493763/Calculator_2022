@@ -55,7 +55,7 @@ namespace Calculator_2022
 
         private void NumberButton_Click(object sender, EventArgs e)
         {
-            string buttonText = returnButtonText(sender); // Get the text vakye from any buttons
+            string buttonText = returnButtonText(sender); // Get the text value from any buttons
 
             if ( int.TryParse(buttonText, out int number) && (number >=0 && number <=9)) // if buttonText is a number between 0 and 9
             {
@@ -71,71 +71,67 @@ namespace Calculator_2022
                     txtDisplay.Text = txtDisplay.Text + buttonText;
                 }
             }
-            else if (buttonText == ".") //  if buttonText is decimal point
-            {
-                txtDisplay.Text += buttonText; // concatenate to display
-            }
-            //else if (buttonText == "√") // if buttonText is square root operator
+            //else if (buttonText == ".") //  if buttonText is decimal point
             //{
-            //    txtDisplay.Text = returnTotalWithLimitedLengthOfString(Math.Sqrt(double.Parse(txtDisplay.Text)).ToString());
+            //    txtDisplay.Text += buttonText; // concatenate to display
             //}
-            //else if (buttonText == "ABS"){
-
-            //    if(getValueFromDisplay() < 0)
+            //else if (buttonText == "=") // if buttonText is equal sign
+            //{
+            //    if (plusButtonClicked)
             //    {
-            //        txtDisplay.Text = (getValueFromDisplay() * -1).ToString();
+            //        total2 = total1 + getValueFromDisplay();
+
+            //    }
+            //    else if (minusButtonClicked)
+            //    {
+            //        total2 = total1 - getValueFromDisplay();
+
+            //    }
+            //    else if (multiplyButtonClicked)
+            //    {
+            //        total2 = total1 * getValueFromDisplay();
+
+            //    }
+            //    else if (divideButtonClicked)
+            //    {
+            //        total2 = total1 / getValueFromDisplay();
+
+            //    }
+            //    else if (exponentButtonClicked)
+            //    {
+            //        total2 = power(total1, getValueFromDisplay());
+
+            //    }
+            //    else if (moduloButtonClicked)
+            //    {
+            //        total2 = total1 % getValueFromDisplay();
+            //    }
+
+
+            //    if (total2 >= 0)
+            //    {
+            //        txtDisplay.Text = returnTotalWithLimitedLengthOfString(total2.ToString()); //display the total value
             //        resetNegate();
             //    }
+            //    else {
+            //        txtDisplay.Text = returnTotalWithLimitedLengthOfString((total2 * -1).ToString() ); //display the total value
+            //        txtNegate.Text = "-";
+            //        negate = true;
+            //    }
+
+            //    total1 = 0;//start from the beginning
             //}
-            else if (buttonText == "=") // if buttonText is equal sign
-            {
-                if (plusButtonClicked)
-                {
-                    total2 = total1 + getValueFromDisplay();
-
-                }
-                else if (minusButtonClicked)
-                {
-                    total2 = total1 - getValueFromDisplay();
-
-                }
-                else if (multiplyButtonClicked)
-                {
-                    total2 = total1 * getValueFromDisplay();
-
-                }
-                else if (divideButtonClicked)
-                {
-                    total2 = total1 / getValueFromDisplay();
-
-                }
-                else if (exponentButtonClicked)
-                {
-                    total2 = power(total1, getValueFromDisplay());
-
-                }
-                else if (moduloButtonClicked)
-                {
-                    total2 = total1 % getValueFromDisplay();
-                }
-
-
-                if (total2 >= 0)
-                {
-                    txtDisplay.Text = returnTotalWithLimitedLengthOfString(total2.ToString()); //display the total value
-                    resetNegate();
-                }
-                else {
-                    txtDisplay.Text = returnTotalWithLimitedLengthOfString((total2 * -1).ToString() ); //display the total value
-                    txtNegate.Text = "-";
-                    negate = true;
-                }
-
-                total1 = 0;//start from the beginning
-            }
 
         } // end of NumberButton_Click event
 
+        private void DecimalButton_Click(object sender, EventArgs e)
+        {
+            if (!txtDisplay.Text.Contains("."))
+            {
+                txtDisplay.Text = txtDisplay.Text + ".";
+            }
+        }
+       
         private void NegateButton_Click(object sender, EventArgs e)
         {
             if (!negate)
@@ -185,6 +181,54 @@ namespace Calculator_2022
                 txtDisplay.Text = (getValueFromDisplay() * -1).ToString();
                 resetNegate();
             }
+        }
+
+        private void EqualsButton_Click(object sender, EventArgs e)
+        {
+            if (plusButtonClicked)
+            {
+                total2 = total1 + getValueFromDisplay();
+
+            }
+            else if (minusButtonClicked)
+            {
+                total2 = total1 - getValueFromDisplay();
+
+            }
+            else if (multiplyButtonClicked)
+            {
+                total2 = total1 * getValueFromDisplay();
+
+            }
+            else if (divideButtonClicked)
+            {
+                total2 = total1 / getValueFromDisplay();
+
+            }
+            else if (exponentButtonClicked)
+            {
+                total2 = power(total1, getValueFromDisplay());
+
+            }
+            else if (moduloButtonClicked)
+            {
+                total2 = total1 % getValueFromDisplay();
+            }
+
+
+            if (total2 >= 0)
+            {
+                txtDisplay.Text = returnTotalWithLimitedLengthOfString(total2.ToString()); //display the total value
+                resetNegate();
+            }
+            else
+            {
+                txtDisplay.Text = returnTotalWithLimitedLengthOfString((total2 * -1).ToString()); //display the total value
+                txtNegate.Text = "-";
+                negate = true;
+            }
+
+            total1 = 0;//start from the beginning
         }
 
         //***********************************************************************************************************************************

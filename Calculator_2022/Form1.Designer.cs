@@ -227,7 +227,7 @@ namespace Calculator_2022
             this.btnDot.TabIndex = 11;
             this.btnDot.Text = ".";
             this.btnDot.UseVisualStyleBackColor = false;
-            this.btnDot.Click += new System.EventHandler(this.NumberButton_Click);
+            this.btnDot.Click += new System.EventHandler(this.DecimalButton_Click);
             // 
             // btnPlus
             // 
@@ -255,7 +255,7 @@ namespace Calculator_2022
             this.btnEqual.TabIndex = 13;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = false;
-            this.btnEqual.Click += new System.EventHandler(this.NumberButton_Click);
+            this.btnEqual.Click += new System.EventHandler(this.EqualsButton_Click);
             // 
             // btnClear
             // 
