@@ -14,8 +14,8 @@ using System.Windows.Forms;
 // aurthor: ching ho, li
 // email: 30493763@cityofglacol.ac.uk
 // date of last update: 28 dec 2025
-// time of last update: 2:00 am
-// version: 1.0.0
+// time of last update: 4:00 am
+// version: 1.1.0
 // description: A simple calculator application using windows form
 // git hub link: https://github.com/30493763/Calculator_2022.git
 // git branch: rewrite
@@ -29,8 +29,9 @@ namespace Calculator_2022
         //***********************************************************************************************************************************
         //        GLOBAL VARIABLES
         //***********************************************************************************************************************************
-        double total1 = 0;
-        double total2 = 0;
+        double total1 = 0; // first operand
+        double total2 = 0; // second operand / result
+
         bool plusButtonClicked = false;
         bool minusButtonClicked = false;
         bool divideButtonClicked = false;
@@ -39,7 +40,7 @@ namespace Calculator_2022
         bool moduloButtonClicked = false;
         bool absoluteButtonClicked = false;
 
-        bool negate = false;
+        bool negate = false; // status of negate button, false = not negated, true = negated
 
         //***********************************************************************************************************************************
 
@@ -49,7 +50,7 @@ namespace Calculator_2022
         }
 
         //***********************************************************************************************************************************
-        //         Click event for all number buttons and operators
+        //         CLICK EVENTS for all number buttons and operators
         //***********************************************************************************************************************************
 
         private void NumberButton_Click(object sender, EventArgs e)
@@ -163,20 +164,16 @@ namespace Calculator_2022
         //         METHODS
         //***********************************************************************************************************************************
 
-        //***********************************************
-        //   Method for returns text of button clicked 
-        //************************************************
-        private string returnButtonText(object sender)
+   
+        private string returnButtonText(object sender) // Method for returns text of button clicked 
         {
             //Cast the sender to a Button so we can access its properties
             Button clickedButton = (Button)sender;
             return clickedButton.Text;
         }// end of returnButtonText method
 
-        //***********************************************
-        //   Method for returns base^exponent using System.Math
-        //************************************************
-        private double power(double baseNumber, double exponent)
+    
+        private double power(double baseNumber, double exponent) // Method for returns base^exponent using System.Math
         {
             int result = 1;
             if (baseNumber == 0 )
@@ -193,42 +190,23 @@ namespace Calculator_2022
             }
         }// end of power method
 
-        //***********************************************
-        //   Method:resetNegate()
-        //   clear txtNegate to white space
-        //   reset negate to false
-        //************************************************
-        private void resetNegate()
+        private void resetNegate() //   clear txtNegate to white space, reset variabe negate to false
         {
             txtNegate.Text = "";
             negate = false;
         }// end of resetNegate method
 
-        //***********************************************
-        //   Method:ifDisplayIsOperatorOrZero()
-        //   if the current display is an operator or zero (return true), the number buttons will replace it
-        //   otherwise (return false) , the number concatenates to the display
-        //   return : bool
-        //************************************************
-        private bool ifDisplayIsOperatorOrZero()
+        private bool ifDisplayIsOperatorOrZero() // check if the display is an operator or zero
         {
+            if (txtDisplay.Text == "+" || txtDisplay.Text == "-" || txtDisplay.Text == "×" || txtDisplay.Text == "/" || txtDisplay.Text == "^" || txtDisplay.Text == "%" || txtDisplay.Text == "0")
+                return true;
+            else
             {
-                if (txtDisplay.Text == "+" || txtDisplay.Text == "-" || txtDisplay.Text == "*" || txtDisplay.Text == "/" || txtDisplay.Text == "^" || txtDisplay.Text == "%" || txtDisplay.Text == "0")
-                    return true;
-                else
-                {
-                    return false;
-                }
+                return false;
             }
         } // end of ifDisplayIsOperatorOrZero method
 
-        //***********************************************
-        //   Method:getOperandValueAndClearDisplay
-        //   get operatpr value
-        //   clear display for next operand
-        //   reset negate status
-        //************************************************
-        private void getOperandValueAndClearDisplay()
+        private void getOperandValueAndClearDisplay() //   1.get operatpr value, 2.clear display for next operand, 3.reset negate status
         {
             if (ifDisplayIsOperatorOrZero())
                 return;
@@ -242,7 +220,7 @@ namespace Calculator_2022
             resetNegate();
         }// end of getOperandValueAndClearDisplay method
 
-        private double getValueFromDisplay()
+        private double getValueFromDisplay() // get value from display, consider negate status
         {
             double value = 0;
             if (negate)
@@ -252,7 +230,7 @@ namespace Calculator_2022
             return value;
         } // end of getValueFromDisplay method
 
-        private void resetAllOperationStatusToFalse()
+        private void resetAllOperationStatusToFalse() // reset all operation status to false
         {
                 plusButtonClicked = false;
                 minusButtonClicked= false; 
@@ -263,7 +241,7 @@ namespace Calculator_2022
                 absoluteButtonClicked = false;
         } // end of private method resetAllOperationStatusToFalse
 
-        private void updateOperationStatus(char operation)
+        private void updateOperationStatus(char operation) // update operation status based on operation char
         {
             resetAllOperationStatusToFalse();
 
@@ -287,9 +265,9 @@ namespace Calculator_2022
                 case '%':
                     moduloButtonClicked = true;
                     break;
-                case 'A':
-                    absoluteButtonClicked = true;
-                    break;
+                //case 'A':
+                //    absoluteButtonClicked = true;
+                //    break;
                 default:
                     break;
             }
