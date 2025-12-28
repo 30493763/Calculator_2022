@@ -14,13 +14,11 @@ using System.Windows.Forms;
 // aurthor: ching ho, li
 // email: 30493763@cityofglacol.ac.uk
 // date of last update: 28 dec 2025
-// time of last update: 4:00 am
-// version: 1.1.0
+// time of last update: 4:25 am
+// version: 1.1.1
 // description: A simple calculator application using windows form
 // git hub link: https://github.com/30493763/Calculator_2022.git
-// git branch: rewrite
-
-
+// git branch: tiny-up-comments
 
 namespace Calculator_2022
 {
@@ -38,7 +36,6 @@ namespace Calculator_2022
         bool multiplyButtonClicked = false;
         bool exponentButtonClicked = false;
         bool moduloButtonClicked = false;
-        bool absoluteButtonClicked = false;
 
         bool negate = false; // status of negate button, false = not negated, true = negated
 
@@ -55,8 +52,7 @@ namespace Calculator_2022
 
         private void NumberButton_Click(object sender, EventArgs e)
         {
-            // Get the text from any buttons
-            string buttonText = returnButtonText(sender);
+            string buttonText = returnButtonText(sender); // Get the text vakye from any buttons
 
             if ( int.TryParse(buttonText, out int number) && (number >=0 && number <=9)) // if buttonText is a number between 0 and 9
             {
@@ -86,9 +82,7 @@ namespace Calculator_2022
                     negate = true;
                 }
                 else
-                {
                     resetNegate();
-                }
             }
             else if (buttonText == "+" || buttonText == "-" || buttonText == "×" || buttonText == "/") // if buttonText is a basic operator
             {
@@ -163,15 +157,11 @@ namespace Calculator_2022
         //***********************************************************************************************************************************
         //         METHODS
         //***********************************************************************************************************************************
-
-   
         private string returnButtonText(object sender) // Method for returns text of button clicked 
         {
-            //Cast the sender to a Button so we can access its properties
-            Button clickedButton = (Button)sender;
+            Button clickedButton = (Button)sender; //Cast the sender to a Button so we can access its properties
             return clickedButton.Text;
         }// end of returnButtonText method
-
     
         private double power(double baseNumber, double exponent) // Method for returns base^exponent using System.Math
         {
@@ -238,7 +228,6 @@ namespace Calculator_2022
                 divideButtonClicked= false; 
                 exponentButtonClicked= false; 
                 moduloButtonClicked= false;
-                absoluteButtonClicked = false;
         } // end of private method resetAllOperationStatusToFalse
 
         private void updateOperationStatus(char operation) // update operation status based on operation char
