@@ -57,6 +57,7 @@ namespace Calculator_2022
             this.btnAbsolute = new System.Windows.Forms.Button();
             this.btnNegate = new System.Windows.Forms.Button();
             this.txtNegate = new System.Windows.Forms.TextBox();
+            this.btnDel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDisplay
@@ -248,10 +249,10 @@ namespace Calculator_2022
             this.btnEqual.BackColor = System.Drawing.SystemColors.MenuText;
             this.btnEqual.Font = new System.Drawing.Font("Digital-7 Italic", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEqual.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEqual.Location = new System.Drawing.Point(513, 343);
+            this.btnEqual.Location = new System.Drawing.Point(513, 340);
             this.btnEqual.Margin = new System.Windows.Forms.Padding(4);
             this.btnEqual.Name = "btnEqual";
-            this.btnEqual.Size = new System.Drawing.Size(107, 95);
+            this.btnEqual.Size = new System.Drawing.Size(107, 103);
             this.btnEqual.TabIndex = 13;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = false;
@@ -262,10 +263,10 @@ namespace Calculator_2022
             this.btnClear.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnClear.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnClear.Location = new System.Drawing.Point(399, 343);
+            this.btnClear.Location = new System.Drawing.Point(399, 394);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(107, 95);
+            this.btnClear.Size = new System.Drawing.Size(107, 49);
             this.btnClear.TabIndex = 14;
             this.btnClear.Text = "AC";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -363,7 +364,7 @@ namespace Calculator_2022
             this.btnAbsolute.Location = new System.Drawing.Point(399, 288);
             this.btnAbsolute.Margin = new System.Windows.Forms.Padding(4);
             this.btnAbsolute.Name = "btnAbsolute";
-            this.btnAbsolute.Size = new System.Drawing.Size(107, 48);
+            this.btnAbsolute.Size = new System.Drawing.Size(107, 49);
             this.btnAbsolute.TabIndex = 21;
             this.btnAbsolute.Text = "ABS";
             this.btnAbsolute.UseVisualStyleBackColor = false;
@@ -396,6 +397,19 @@ namespace Calculator_2022
             this.txtNegate.TabIndex = 23;
             this.txtNegate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnDel
+            // 
+            this.btnDel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnDel.Font = new System.Drawing.Font("Digital-7 Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDel.Location = new System.Drawing.Point(399, 340);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(107, 49);
+            this.btnDel.TabIndex = 24;
+            this.btnDel.Text = "DEL";
+            this.btnDel.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -403,6 +417,7 @@ namespace Calculator_2022
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(632, 453);
+            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.txtNegate);
             this.Controls.Add(this.btnNegate);
             this.Controls.Add(this.btnAbsolute);
@@ -463,6 +478,7 @@ namespace Calculator_2022
         private System.Windows.Forms.Button btnAbsolute;
         private System.Windows.Forms.Button btnNegate;
         private System.Windows.Forms.TextBox txtNegate;
+        private System.Windows.Forms.Button btnDel;
     }
 }
 
