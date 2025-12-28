@@ -67,23 +67,15 @@ namespace Calculator_2022
             // Cast the sender to a Button so we can access its properties
             Button clickedButton = (Button)sender;
 
-            // Get the text (0-9) from the button
+            // Get the text from any buttons
             string buttonText = clickedButton.Text;
-
-            // Example: Show the number or append it to a TextBox
-            
 
             if ( int.TryParse(buttonText, out int number) && (number >=0 && number <=9)) // check if buttonText is a number between 0 and 9
             {
-                // thats a number button clicked
                 if (ifDisplayIsOperatorOrZero())
-                {
-                    txtDisplay.Text = buttonText; // replace display
-                }
+                    txtDisplay.Text = buttonText;
                 else
-                {
-                    txtDisplay.Text += buttonText; // concatenate to display
-                }
+                    txtDisplay.Text = txtDisplay.Text + buttonText;
             }
             else if (buttonText == ".") // check if buttonText is decimal point
             {
@@ -109,6 +101,13 @@ namespace Calculator_2022
                 {
                     resetNegate();
                 }
+            }
+            else if (buttonText == "+" || buttonText == "-" || buttonText == "×" || buttonText == "/" )
+            {
+                getOperandValueAndClearDisplay();
+                resetNegate();
+                updateOperationStatus(char.Parse(buttonText));
+                txtDisplay.Text = buttonText;
             }
 
         }
