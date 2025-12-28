@@ -28,7 +28,7 @@ namespace Calculator_2022
         //        GLOBAL VARIABLES
         //***********************************************************************************************************************************
 
-        const int MAX_LENGTH_OF_STRING = 10;
+        const int MAX_LENGTH_OF_STRING = 9;
         
         double total1 = 0; // first operand
         double total2 = 0; // second operand / result
@@ -62,7 +62,14 @@ namespace Calculator_2022
                 if (ifDisplayIsOperatorOrZero())
                     txtDisplay.Text = buttonText;
                 else
+                {
+                    if (txtDisplay.Text.Length > MAX_LENGTH_OF_STRING) // limit the length of string in display
+                    {
+                        MessageBox.Show("Maximum number of digits reached!");
+                        return;
+                    }
                     txtDisplay.Text = txtDisplay.Text + buttonText;
+                }
             }
             else if (buttonText == ".") //  if buttonText is decimal point
             {
@@ -105,8 +112,12 @@ namespace Calculator_2022
                 txtDisplay.Text = returnTotalWithLimitedLengthOfString(Math.Sqrt(double.Parse(txtDisplay.Text)).ToString());
             }
             else if (buttonText == "ABS"){
-                txtDisplay.Text = (getValueFromDisplay() * -1).ToString();
-                resetNegate();
+
+                if(getValueFromDisplay() < 0)
+                {
+                    txtDisplay.Text = (getValueFromDisplay() * -1).ToString();
+                    resetNegate();
+                }
             }
             else if (buttonText == "=") // if buttonText is equal sign
             {
