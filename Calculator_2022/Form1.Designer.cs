@@ -269,7 +269,7 @@ namespace Calculator_2022
             this.btnClear.TabIndex = 14;
             this.btnClear.Text = "AC";
             this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.NumberButton_Click);
+            this.btnClear.Click += new System.EventHandler(this.ClsButton_Click);
             // 
             // btnMinus
             // 

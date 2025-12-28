@@ -75,14 +75,14 @@ namespace Calculator_2022
             {
                 txtDisplay.Text += buttonText; // concatenate to display
             }
-            else if (buttonText == "AC") //  if buttonText is AC (all clear)
-            {
-                txtDisplay.Text = "0";
-                total1 = 0;
-                total2 = 0;
-                resetAllOperationStatusToFalse();
-                resetNegate();
-            }
+            //else if (buttonText == "AC") //  if buttonText is AC (all clear)
+            //{
+            //    txtDisplay.Text = "0";
+            //    total1 = 0;
+            //    total2 = 0;
+            //    resetAllOperationStatusToFalse();
+            //    resetNegate();
+            //}
             else if (buttonText == "+/-") //  if buttonText is negate
             {
                 // Negate button clicked
@@ -167,6 +167,17 @@ namespace Calculator_2022
             }
 
         } // end of NumberButton_Click event
+
+        private void ClsButton_Click(object sender, EventArgs e)
+        {
+            txtDisplay.Text = "0";
+            total1 = 0;
+            total2 = 0;
+            resetAllOperationStatusToFalse();
+            resetNegate();
+        }
+
+
 
         //***********************************************************************************************************************************
         //         METHODS
