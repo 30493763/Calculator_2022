@@ -86,19 +86,12 @@ namespace Calculator_2022
                 else
                     resetNegate();
             }
-            //else if (buttonText == "+" || buttonText == "-" || buttonText == "×" || buttonText == "/") // if buttonText is a basic operator
+            //else if (buttonText == "^" || buttonText == "%" ) // if buttonText is a Exponent or modulu operator
             //{
             //    getOperandValueAndClearDisplay();
-            //    resetNegate();
             //    updateOperationStatus(char.Parse(buttonText));
             //    txtDisplay.Text = buttonText;
             //}
-            else if (buttonText == "^" || buttonText == "%" ) // if buttonText is a Exponent or modulu operator
-            {
-                getOperandValueAndClearDisplay();
-                updateOperationStatus(char.Parse(buttonText));
-                txtDisplay.Text = buttonText;
-            }
             else if (buttonText == "√") // if buttonText is square root operator
             {
                 txtDisplay.Text = returnTotalWithLimitedLengthOfString(Math.Sqrt(double.Parse(txtDisplay.Text)).ToString());
@@ -174,6 +167,14 @@ namespace Calculator_2022
             string buttonText = returnButtonText(sender); // Get the text vakye from any buttons
             getOperandValueAndClearDisplay();
             resetNegate();
+            updateOperationStatus(char.Parse(buttonText));
+            txtDisplay.Text = buttonText;
+        }
+
+        private void ExponentModuluButton_Click(object sender, EventArgs e)
+        {
+            string buttonText = returnButtonText(sender); // Get the text vakye from any buttons
+            getOperandValueAndClearDisplay();
             updateOperationStatus(char.Parse(buttonText));
             txtDisplay.Text = buttonText;
         }
