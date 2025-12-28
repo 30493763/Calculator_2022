@@ -241,7 +241,7 @@ namespace Calculator_2022
             this.btnPlus.TabIndex = 12;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = false;
-            this.btnPlus.Click += new System.EventHandler(this.NumberButton_Click);
+            this.btnPlus.Click += new System.EventHandler(this.BasicOperator_Click);
             // 
             // btnEqual
             // 
@@ -283,7 +283,7 @@ namespace Calculator_2022
             this.btnMinus.TabIndex = 15;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = false;
-            this.btnMinus.Click += new System.EventHandler(this.NumberButton_Click);
+            this.btnMinus.Click += new System.EventHandler(this.BasicOperator_Click);
             // 
             // btnMultiply
             // 
@@ -297,7 +297,7 @@ namespace Calculator_2022
             this.btnMultiply.TabIndex = 16;
             this.btnMultiply.Text = "×";
             this.btnMultiply.UseVisualStyleBackColor = false;
-            this.btnMultiply.Click += new System.EventHandler(this.NumberButton_Click);
+            this.btnMultiply.Click += new System.EventHandler(this.BasicOperator_Click);
             // 
             // btnDivision
             // 
@@ -311,7 +311,7 @@ namespace Calculator_2022
             this.btnDivision.TabIndex = 17;
             this.btnDivision.Text = "/";
             this.btnDivision.UseVisualStyleBackColor = false;
-            this.btnDivision.Click += new System.EventHandler(this.NumberButton_Click);
+            this.btnDivision.Click += new System.EventHandler(this.BasicOperator_Click);
             // 
             // btnExponen
             // 

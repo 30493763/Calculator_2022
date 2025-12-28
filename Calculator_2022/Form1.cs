@@ -75,14 +75,6 @@ namespace Calculator_2022
             {
                 txtDisplay.Text += buttonText; // concatenate to display
             }
-            //else if (buttonText == "AC") //  if buttonText is AC (all clear)
-            //{
-            //    txtDisplay.Text = "0";
-            //    total1 = 0;
-            //    total2 = 0;
-            //    resetAllOperationStatusToFalse();
-            //    resetNegate();
-            //}
             else if (buttonText == "+/-") //  if buttonText is negate
             {
                 // Negate button clicked
@@ -94,13 +86,13 @@ namespace Calculator_2022
                 else
                     resetNegate();
             }
-            else if (buttonText == "+" || buttonText == "-" || buttonText == "×" || buttonText == "/") // if buttonText is a basic operator
-            {
-                getOperandValueAndClearDisplay();
-                resetNegate();
-                updateOperationStatus(char.Parse(buttonText));
-                txtDisplay.Text = buttonText;
-            }
+            //else if (buttonText == "+" || buttonText == "-" || buttonText == "×" || buttonText == "/") // if buttonText is a basic operator
+            //{
+            //    getOperandValueAndClearDisplay();
+            //    resetNegate();
+            //    updateOperationStatus(char.Parse(buttonText));
+            //    txtDisplay.Text = buttonText;
+            //}
             else if (buttonText == "^" || buttonText == "%" ) // if buttonText is a Exponent or modulu operator
             {
                 getOperandValueAndClearDisplay();
@@ -177,7 +169,14 @@ namespace Calculator_2022
             resetNegate();
         }
 
-
+        private void BasicOperator_Click(object sender, EventArgs e)
+        {
+            string buttonText = returnButtonText(sender); // Get the text vakye from any buttons
+            getOperandValueAndClearDisplay();
+            resetNegate();
+            updateOperationStatus(char.Parse(buttonText));
+            txtDisplay.Text = buttonText;
+        }
 
         //***********************************************************************************************************************************
         //         METHODS
@@ -281,7 +280,7 @@ namespace Calculator_2022
                 case '-':
                     minusButtonClicked = true;
                     break;
-                case '*':
+                case '×':
                     multiplyButtonClicked = true;
                     break;
                 case '/':
