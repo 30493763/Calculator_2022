@@ -74,9 +74,7 @@ namespace Calculator_2022
         private void DecimalButton_Click(object sender, EventArgs e) // for decimal point button
         {
             if (!txtDisplay.Text.Contains("."))
-            {
                 txtDisplay.Text = txtDisplay.Text + ".";
-            }
         }//end of DecimalButton_Click event
 
         private void NegateButton_Click(object sender, EventArgs e) // for negate button
@@ -229,13 +227,9 @@ namespace Calculator_2022
         {
             string totalString;
             if (total.Length > MAX_LENGTH_OF_STRING)
-            {
                 totalString = total.Substring(0, MAX_LENGTH_OF_STRING);
-            }
             else
-            {
                 totalString = total;
-            }
             return totalString;
         } // end of returnTotalWithLimitedLengthOfString method
 
