@@ -18,7 +18,7 @@ using System.Windows.Forms;
 // version: 1.2.0
 // description: A simple calculator application using windows form
 // git hub link: https://github.com/30493763/Calculator_2022.git
-// git branch: new-click-events
+// git branch: main
 
 namespace Calculator_2022
 {
