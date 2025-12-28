@@ -75,22 +75,16 @@ namespace Calculator_2022
             {
                 txtDisplay.Text += buttonText; // concatenate to display
             }
-            else if (buttonText == "+/-") //  if buttonText is negate
-            {
-                // Negate button clicked
-                if (!negate)
-                {
-                    txtNegate.Text = "-";
-                    negate = true;
-                }
-                else
-                    resetNegate();
-            }
-            //else if (buttonText == "^" || buttonText == "%" ) // if buttonText is a Exponent or modulu operator
+            //else if (buttonText == "+/-") //  if buttonText is negate
             //{
-            //    getOperandValueAndClearDisplay();
-            //    updateOperationStatus(char.Parse(buttonText));
-            //    txtDisplay.Text = buttonText;
+            //    // Negate button clicked
+            //    if (!negate)
+            //    {
+            //        txtNegate.Text = "-";
+            //        negate = true;
+            //    }
+            //    else
+            //        resetNegate();
             //}
             else if (buttonText == "√") // if buttonText is square root operator
             {
@@ -152,6 +146,17 @@ namespace Calculator_2022
             }
 
         } // end of NumberButton_Click event
+
+        private void NegateButton_Click(object sender, EventArgs e)
+        {
+            if (!negate)
+            {
+                txtNegate.Text = "-";
+                negate = true;
+            }
+            else
+                resetNegate();
+        }
 
         private void ClsButton_Click(object sender, EventArgs e)
         {

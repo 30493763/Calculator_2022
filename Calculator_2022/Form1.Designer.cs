@@ -381,7 +381,7 @@ namespace Calculator_2022
             this.btnNegate.TabIndex = 22;
             this.btnNegate.Text = "+/-";
             this.btnNegate.UseVisualStyleBackColor = false;
-            this.btnNegate.Click += new System.EventHandler(this.NumberButton_Click);
+            this.btnNegate.Click += new System.EventHandler(this.NegateButton_Click);
             // 
             // txtNegate
             // 
