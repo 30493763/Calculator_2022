@@ -116,7 +116,9 @@ namespace Calculator_2022
 
         private void SquareRootButton_Click(object sender, EventArgs e) // for square root button
         {
-            txtDisplay.Text = returnTotalWithLimitedLengthOfString(Math.Sqrt(double.Parse(txtDisplay.Text)).ToString());
+            string result = returnTotalWithLimitedLengthOfString(Math.Sqrt(double.Parse(txtDisplay.Text)).ToString());
+            txtDisplay.Text = result;
+
         }//end of SquareRootButton_Click event
 
         private void AbsoluteButton_Click(object sender, EventArgs e) // for absolute value button
