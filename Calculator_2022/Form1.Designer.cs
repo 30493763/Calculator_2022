@@ -446,7 +446,7 @@ namespace Calculator_2022
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Calculator";
+            this.Text = "Understanding Mathematical Operations ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
