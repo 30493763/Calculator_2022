@@ -13,8 +13,8 @@ using System.Windows.Forms;
 
 // aurthor: ching ho, li
 // email: 30493763@cityofglacol.ac.uk
-// date of last update: 28 dec 2025
-// time of last update: 7:39 pm
+// date of last update: 28 Jan 2026
+// time of last update: 13:58 pm
 // version: 1.2.1
 // description: A simple calculator application using windows form
 // git hub link: https://github.com/30493763/Calculator_2022.git
