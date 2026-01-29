@@ -7,6 +7,12 @@
 
 Create a C# Windows Forms Application that implement Basic Numerical Operations
 
+## Installation
+
+*   Double click on the file "Digital7Italic-BW658.ttf" to install custom font onto your system.
+
+*   Double click on the file "Calculator_2022.sln" to open the project in Visual Studio.
+
 ## Key Components
 
 *   Addition (+)
