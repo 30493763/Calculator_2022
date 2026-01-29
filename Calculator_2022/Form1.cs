@@ -54,6 +54,8 @@ namespace Calculator_2022
         //         CLICK EVENTS for all number buttons and operators
         //***********************************************************************************************************************************
 
+
+        //******************************        number buttons 0-9 . +/- **************************************************************** //
         private void NumberButton_Click(object sender, EventArgs e) // for number buttons 0-9
         {
             string buttonText = returnButtonText(sender); // Get the text value from buttons
@@ -88,15 +90,7 @@ namespace Calculator_2022
                 resetNegate();
         }//end of NegateButton_Click event
 
-        private void ClsButton_Click(object sender, EventArgs e) // for clear button
-        {
-            txtDisplay.Text = "0";
-            total1 = 0;
-            total2 = 0;
-            resetAllOperationStatusToFalse();
-            resetNegate();
-        }//end of ClsButton_Click event
-
+        //******************************       operator buttons  **************************************************************** //
         private void BasicOperator_Click(object sender, EventArgs e) // for basic operator buttons + - × /
         {
             string buttonText = returnButtonText(sender); // Get the text value from buttons
@@ -130,14 +124,6 @@ namespace Calculator_2022
             }
         }//end of AbsoluteButton_Click event
 
-        private void BackspaceButton_Click(object sender, EventArgs e) // for backspace button
-        {
-            if (txtDisplay.Text.Length > 1)
-                txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.Text.Length - 1);
-            else
-                txtDisplay.Text = "0";
-        }//end of BackspaceButton_Click event
-
         private void EqualsButton_Click(object sender, EventArgs e) // for equals button
         {
             if (plusButtonClicked)
@@ -166,6 +152,27 @@ namespace Calculator_2022
             }
             total1 = 0;//start from the beginning
         }// end of EqualsButton_Click event
+
+
+        //******************************       input editing buttons  **************************************************************** //
+
+        private void ClsButton_Click(object sender, EventArgs e) // for clear button
+        {
+            txtDisplay.Text = "0";
+            total1 = 0;
+            total2 = 0;
+            resetAllOperationStatusToFalse();
+            resetNegate();
+        }//end of ClsButton_Click event
+
+        private void BackspaceButton_Click(object sender, EventArgs e) // for backspace button
+        {
+            if (txtDisplay.Text.Length > 1)
+                txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.Text.Length - 1);
+            else
+                txtDisplay.Text = "0";
+        }//end of BackspaceButton_Click event
+
 
         //***********************************************************************************************************************************
         //         METHODS
